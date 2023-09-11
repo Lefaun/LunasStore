@@ -60,35 +60,35 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.header(" Coleção DVD1")
-    st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/12AF4C15-C421-478E-944C-8F42B9B50185.png")
+    st.image("12AF4C15-C421-478E-944C-8F42B9B50185.png")
     Button1 = st.number_input("Quantidade e adicione ao Carrinho", key="Core")
 with col2:
     st.header("DVD 2 PIPI")
-    st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/07944EEF-7714-493A-94A0-D512BA71DF47.png")
+    st.image("07944EEF-7714-493A-94A0-D512BA71DF47.png")
     Button2 = st.number_input("Quantidade e adicione ao Carrinho", key="Alba")
 with col3:
     st.header("A Lassie")
-    st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/IMG_5123.png")
+    st.image("IMG_5123.png")
     Button3=st.number_input("Quantidade e adicione ao Carrinho", key="Delta")
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/IMG_5131.png")
+    st.image("IMG_5131.png")
     Button4=st.number_input("Quantidade e adicione ao Carrinho", key="Coresey")
 with col2:
-    st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/IMG_5124.png")
+    st.image("IMG_5124.png")
     Button5=st.number_input("Quantidade e adicione ao Carrinho", key="Ypsilon")
 with col3:
-    st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/IMG_5130.png")
+    st.image("IMG_5130.png")
     Button6=st.number_input("Quantidade e adicione ao Carrinho", key="image")
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/IMG_5131.png")
+    st.image("IMG_5131.png")
     Button7=st.number_input("Quantidade e adicione ao Carrinho", key="Cosey")
 with col2:
-    st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/IMG_5124.png")
+    st.image("IMG_5124.png")
     Button8=st.number_input("Quantidade e adicione ao Carrinho", key="Yplon")
 with col3:
-    st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/IMG_5130.png")
+    st.image("IMG_5130.png")
     Button9=st.number_input("Quantidade e adicione ao Carrinho", key="lta")
