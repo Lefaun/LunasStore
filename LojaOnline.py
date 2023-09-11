@@ -89,7 +89,7 @@ if choice == 'Pipi das Meias Altas':
         st.header("A Lassie")
         st.image("IMG_5123.png")
         Button3=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Delta")
-if Choice == 'O Mundo de Patty':
+if choice == 'O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("IMG_5131.png")
@@ -100,7 +100,7 @@ if Choice == 'O Mundo de Patty':
     with col3:
         st.image("IMG_5130.png")
         Button6=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="image")
-    
+if choice == " Filmes de Natal"
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("IMG_5131.png")
