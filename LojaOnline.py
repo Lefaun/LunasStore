@@ -58,7 +58,7 @@ with st.sidebar:
         send_mail(email, subject, message, )
         st.subheader('  Mensagem enviada com Sucesso!')
     
-    Menu = st.multiselect("Escolha uma categoria de Produtos", option_menu)
+Menu = st.multiselect("Escolha uma categoria de Produtos", option_menu)
     
 if choice == 'Encomendar':
     
