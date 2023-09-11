@@ -74,22 +74,22 @@ if choice == 'Encomendar':
         send_mail(email, subject, message)
         st.subheader('  Mensagem enviada com Sucesso!') 
 
-
-col1, col2, col3 = st.columns(3)
-    
-with col1:
-    st.header(" Coleção DVD1")
-    st.image("12AF4C15-C421-478E-944C-8F42B9B50185.png")
-    Button1 = st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Core")
-with col2:
-    st.header("DVD 2 PIPI")
-    st.image("07944EEF-7714-493A-94A0-D512BA71DF47.png")
-    Button2 = st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Alba")
-with col3:
-    st.header("A Lassie")
-    st.image("IMG_5123.png")
-    Button3=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Delta")
-if Menu == 'O Mundo de Patty':
+if choice == 'Pipi das Meias Altas':
+    col1, col2, col3 = st.columns(3)
+        
+    with col1:
+        st.header(" Coleção DVD1")
+        st.image("12AF4C15-C421-478E-944C-8F42B9B50185.png")
+        Button1 = st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Core")
+    with col2:
+        st.header("DVD 2 PIPI")
+        st.image("07944EEF-7714-493A-94A0-D512BA71DF47.png")
+        Button2 = st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Alba")
+    with col3:
+        st.header("A Lassie")
+        st.image("IMG_5123.png")
+        Button3=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Delta")
+if Choice == 'O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("IMG_5131.png")
