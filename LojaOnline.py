@@ -16,7 +16,20 @@ Menu = st.multiselect("Escolha uma categoria de Produtos", Produtos)
 Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
 button = st.sidebar.button("Pesquise Por TItulo", )
 
-
+def send_mail(email, subject, message):
+    try:
+        server = smtplib.SMTP('smtp.gmail.com',587)
+        server.ehlo()
+        server.starttls()
+        username = 'maillefaun@gmail.com'
+        password = 'qftabgvjolpfjniw'
+        server.login(username, password)
+        to_email = 'maillefaun@gmail.com'
+        server.sendmail(username, to_email, mensagem)
+        
+        server.close()
+    except Exception as e:
+        st.error(f' Ocorreu um Erro ao enviar o e-mail, Desculpe: {e}')
 
 with st.sidebar:
 
@@ -31,6 +44,7 @@ with st.sidebar:
     if submit_e_button:
         st.subheader('  Mensagem enviada com Sucesso!')
     option_menu = ["Home", "Encomendar"]
+    
     Menu = st.multiselect("Escolha uma categoria de Produtos", option_menu)
     if option_menu == 'Encomendar':
         email_form = st.form(key='my_email_form', clear_on_submit=False)
