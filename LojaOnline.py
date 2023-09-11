@@ -8,6 +8,18 @@ import pandas as pd
 import numpy as np
 import altair as alt
 from collections import Counter
+import streamlit as st
+import pandas as pd
+import numpy as np
+import altair as alt
+import matplotlib as plt
+import base64
+from collections import Counter
+import streamlit.components.v1 as components
+import pandas as pd
+import streamlit as st
+import smtplib
+import numpy as np
 
 st.title(" A Loja online da Luna -  Livraria e DVDs e Séries")
 Produtos=("Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", " Livros de Aventura", " Livros de Ciencia")
@@ -33,44 +45,49 @@ def send_mail(email, subject, message):
 
 with st.sidebar:
 
-    email_form = st.form(key='my_email_form', clear_on_submit=False)
-    email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
-    with st.expander("See explanation"):
-        emailsubject = email_form.text_input(label=' Escreva aqui o Assunto ')
-        emailmessage = email_form.text_area(label=' Escreva a sua Mensagem ')
-
-        submit_e_button = email_form.form_submit_button(label='Enviar')
-
-    if submit_e_button:
-        st.subheader('  Mensagem enviada com Sucesso!')
+    if selected == 'Encomendar':
+        
+        email_form = st.form(key='my_email_form', clear_on_submit=False)
+        email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
+        
+        subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
+        message = email_form.text_area (label = ' Escreva a sua Mensagem ')
+            
+        if email_form.form_submit_button(label=' Enviar '):
+            mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}'.encode('utf-8')
+            send_mail(email, subject, message)
+            st.subheader('  Mensagem enviada com Sucesso!') 
     
     option_menu = ["Home", "Encomendar"]
     
     Menu = st.multiselect("Escolha uma categoria de Produtos", option_menu)
     
-    if option_menu == 'Encomendar':
+    if selected == 'Encomendar':
+        
         email_form = st.form(key='my_email_form', clear_on_submit=False)
         email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
-        with st.expander("See explanation"):
-            emailsubject = email_form.text_input (label = ' Escreva aqui o Assunto ')
-            emailmessage = email_form.text_area (label = ' Escreva a sua Mensagem ')
-
-            submit_e_button = email_form.form_submit_button(label='Enviar' )
-
-        if submit_e_button == True:
-            st.subheader('  Mensagem enviada com Sucesso!')
+        
+        subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
+        message = email_form.text_area (label = ' Escreva a sua Mensagem ')
+            
+        if email_form.form_submit_button(label=' Enviar '):
+            mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}'.encode('utf-8')
+            send_mail(email, subject, message)
+            st.subheader('  Mensagem enviada com Sucesso!') 
 
 if option_menu == 'Encomendar':
+   
+        
     email_form = st.form(key='my_email_form', clear_on_submit=False)
     email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
-    with st.expander("See explanation"):
-        emailsubject = email_form.text_input(label=' Escreva aqui o Assunto ')
-        emailmessage = email_form.text_area(label=' Escreva a sua Mensagem ')
-
-        submit_e_button = email_form.form_submit_button(label='Enviar')
-
-    if submit_e_button:
-        st.subheader('  Mensagem enviada com Sucesso!')
+    
+    subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
+    message = email_form.text_area (label = ' Escreva a sua Mensagem ')
+        
+    if email_form.form_submit_button(label=' Enviar '):
+        mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}'.encode('utf-8')
+        send_mail(email, subject, message)
+        st.subheader('  Mensagem enviada com Sucesso!') 
 
 col1, col2, col3 = st.columns(3)
 
