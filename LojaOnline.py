@@ -100,7 +100,7 @@ if choice == 'O Mundo de Patty':
     with col3:
         st.image("IMG_5130.png")
         Button6=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="image")
-if choice == " Filmes de Natal"
+if choice == " Filmes de Natal":
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("IMG_5131.png")
