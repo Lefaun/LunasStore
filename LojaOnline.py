@@ -6,13 +6,11 @@ import smtplib
 import streamlit as st
 import pandas as pd
 import numpy as np
-import altair as alt
+
 from collections import Counter
 import streamlit as st
 import pandas as pd
 import numpy as np
-import altair as alt
-import matplotlib as plt
 import base64
 from collections import Counter
 import streamlit.components.v1 as components
