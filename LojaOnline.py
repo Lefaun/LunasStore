@@ -23,7 +23,7 @@ st.title(" A Loja online da Luna -  Livraria e DVDs e Séries")
 Menu=("Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", " Livros de Aventura", " Livros de Ciencia", "Encomendar")
 
 choice = st.selectbox("Selecione uma Opção", Menu)
-
+Encomendas = []
 Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
 button = st.sidebar.button("Pesquise Por TItulo", )
 
@@ -67,11 +67,12 @@ if choice == 'Encomendar':
     subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
     message = email_form.text_area (label = ' Escreva a sua Mensagem ')
     encomenda = email_form.text_area (label = ' Artigos e Quantidade ')
+    
     if email_form.form_submit_button(label=' Enviar '):
         mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
         send_mail(email, subject, message, )
         st.subheader('  Mensagem enviada com Sucesso!') 
-
+        st.write(Encomendas)
 if choice == 'Pipi das Meias Altas':
     col1, col2, col3 = st.columns(3)
         
@@ -79,15 +80,24 @@ if choice == 'Pipi das Meias Altas':
         st.header(" Coleção DVD1")
         st.image("12AF4C15-C421-478E-944C-8F42B9B50185.png")
         Button1 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Core")
+        REF = str("Encomenda PIPI 1")
+            if Button1 >0:
+                Encomendas.append(REF)
     with col2:
         st.header("DVD 2 PIPI")
         st.image("07944EEF-7714-493A-94A0-D512BA71DF47.png")
         Button2 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Alba")
+        REF = str("Encomenda PIPI 2")
+            if Button2 >0:
+                Encomendas.append(REF)
     with col3:
         st.header("A Lassie")
         st.image("IMG_5123.png")
         Button3=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Delta")
-if choice == 'O Mundo de Patty':
+        REF = str("Encomenda Lassie)
+            if Button3 >0:
+                Encomendas.append(REF)
+if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("IMG_5131.png")
