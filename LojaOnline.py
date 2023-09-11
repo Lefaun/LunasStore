@@ -81,22 +81,22 @@ if choice == 'Pipi das Meias Altas':
         st.image("12AF4C15-C421-478E-944C-8F42B9B50185.png")
         Button1 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Core")
         REF = str("Encomenda PIPI 1")
-            if Button1 >0:
-                Encomendas.append(REF)
+        if Button1 >0:
+            Encomendas.append(REF)
     with col2:
         st.header("DVD 2 PIPI")
         st.image("07944EEF-7714-493A-94A0-D512BA71DF47.png")
         Button2 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Alba")
         REF = str("Encomenda PIPI 2")
-            if Button2 >0:
-                Encomendas.append(REF)
+        if Button2 >0:
+            Encomendas.append(REF)
     with col3:
         st.header("A Lassie")
         st.image("IMG_5123.png")
         Button3=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Delta")
         REF = str("Encomenda Lassie)
-            if Button3 >0:
-                Encomendas.append(REF)
+        if Button3 >0:
+            Encomendas.append(REF)
 if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
     with col1:
