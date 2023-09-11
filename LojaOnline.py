@@ -20,8 +20,9 @@ import smtplib
 import numpy as np
 
 st.title(" A Loja online da Luna -  Livraria e DVDs e Séries")
-Produtos=("Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", " Livros de Aventura", " Livros de Ciencia", "Encomendar")
-Menu = st.multiselect("Escolha uma categoria de Produtos", Produtos)
+Menu=("Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", " Livros de Aventura", " Livros de Ciencia", "Encomendar")
+
+choice = st.selectbox("Selecione uma Opção", Menu)
 
 Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
 button = st.sidebar.button("Pesquise Por TItulo", )
@@ -60,7 +61,7 @@ with st.sidebar:
     
     Menu = st.multiselect("Escolha uma categoria de Produtos", option_menu)
     
-if Menu == 'Encomendar':
+if choice == 'Encomendar':
     
     email_form = st.form(key='my_email_form', clear_on_submit=False)
     email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
@@ -79,34 +80,34 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.header(" Coleção DVD1")
     st.image("12AF4C15-C421-478E-944C-8F42B9B50185.png")
-    Button1 = st.number_input("Quantidade e adicione ao Carrinho", key="Core")
+    Button1 = st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Core")
 with col2:
     st.header("DVD 2 PIPI")
     st.image("07944EEF-7714-493A-94A0-D512BA71DF47.png")
-    Button2 = st.number_input("Quantidade e adicione ao Carrinho", key="Alba")
+    Button2 = st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Alba")
 with col3:
     st.header("A Lassie")
     st.image("IMG_5123.png")
-    Button3=st.number_input("Quantidade e adicione ao Carrinho", key="Delta")
+    Button3=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Delta")
 if Menu == 'O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("IMG_5131.png")
-        Button4=st.number_input("Quantidade e adicione ao Carrinho", key="Coresey")
+        Button4=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Coresey")
     with col2:
         st.image("IMG_5124.png")
-        Button5=st.number_input("Quantidade e adicione ao Carrinho", key="Ypsilon")
+        Button5=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Ypsilon")
     with col3:
         st.image("IMG_5130.png")
-        Button6=st.number_input("Quantidade e adicione ao Carrinho", key="image")
+        Button6=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="image")
     
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("IMG_5131.png")
-        Button7=st.number_input("Quantidade e adicione ao Carrinho", key="Cosey")
+        Button7=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Cosey")
     with col2:
         st.image("IMG_5124.png")
-        Button8=st.number_input("Quantidade e adicione ao Carrinho", key="Yplon")
+        Button8=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Yplon")
     with col3:
         st.image("IMG_5130.png")
-        Button9=st.number_input("Quantidade e adicione ao Carrinho", key="lta")
+        Button9=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="lta")
