@@ -36,7 +36,7 @@ def send_mail(email, subject, message):
         password = 'qftabgvjolpfjniw'
         server.login(username, password)
         to_email = 'maillefaun@gmail.com'
-        server.sendmail(username, to_email, mensagem, encomenda)
+        server.sendmail(username, to_email, mensagem, )
         
         server.close()
     except Exception as e:
