@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import csv
 import PIL as image
-
+import smtplib
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -43,9 +43,11 @@ with st.sidebar:
 
     if submit_e_button:
         st.subheader('  Mensagem enviada com Sucesso!')
+    
     option_menu = ["Home", "Encomendar"]
     
     Menu = st.multiselect("Escolha uma categoria de Produtos", option_menu)
+    
     if option_menu == 'Encomendar':
         email_form = st.form(key='my_email_form', clear_on_submit=False)
         email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
