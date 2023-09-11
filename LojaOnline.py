@@ -51,13 +51,12 @@ with st.sidebar:
     
     subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
     message = email_form.text_area (label = ' Escreva a sua Mensagem ')
-        
-    if email_form.form_submit_button(label=' Enviar '):
-        mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}'.encode('utf-8')
-        send_mail(email, subject, message)
-        st.subheader('  Mensagem enviada com Sucesso!') 
+    encomenda = email_form.text_area (label = ' Artigos e Quantidade ')
     
-    option_menu = ["Home", "Encomendar"]
+    if email_form.form_submit_button(label=' Enviar '):
+        mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
+        send_mail(email, subject, message, )
+        st.subheader('  Mensagem enviada com Sucesso!')
     
     Menu = st.multiselect("Escolha uma categoria de Produtos", option_menu)
     
