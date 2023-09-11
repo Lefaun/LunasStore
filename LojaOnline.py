@@ -58,7 +58,6 @@ with st.sidebar:
         send_mail(email, subject, message, )
         st.subheader('  Mensagem enviada com Sucesso!')
     
-choice = st.multiselect("Escolha uma categoria de Produtos", Menu)
     
 if choice == 'Encomendar':
     
