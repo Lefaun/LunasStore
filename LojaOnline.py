@@ -63,7 +63,7 @@ with st.sidebar:
     
 if choice == 'Encomendar':
     
-    email_form = st.form(key='my_email_form', clear_on_submit=False)
+    email_form = st.form(key='my_email_form2', clear_on_submit=False)
     email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
     
     subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
