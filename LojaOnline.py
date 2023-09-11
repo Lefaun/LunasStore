@@ -94,7 +94,7 @@ if choice == 'Pipi das Meias Altas':
         st.header("A Lassie")
         st.image("IMG_5123.png")
         Button3=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Delta")
-        REF = str("Encomenda Lassie)
+        REF = str("Encomenda Lassie")
         if Button3 >0:
             Encomendas.append(REF)
 if choice == ' O Mundo de Patty':
