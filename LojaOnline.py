@@ -36,7 +36,7 @@ def send_mail(email, subject, message):
         password = 'qftabgvjolpfjniw'
         server.login(username, password)
         to_email = 'maillefaun@gmail.com'
-        server.sendmail(username, to_email, mensagem)
+        server.sendmail(username, to_email, mensagem, encomenda)
         
         server.close()
     except Exception as e:
@@ -68,10 +68,10 @@ if choice == 'Encomendar':
     
     subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
     message = email_form.text_area (label = ' Escreva a sua Mensagem ')
-        
+    encomenda = email_form.text_area (label = ' Artigos e Quantidade ')
     if email_form.form_submit_button(label=' Enviar '):
-        mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}'.encode('utf-8')
-        send_mail(email, subject, message)
+        mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
+        send_mail(email, subject, message, encomenda)
         st.subheader('  Mensagem enviada com Sucesso!') 
 
 if choice == 'Pipi das Meias Altas':
@@ -80,34 +80,34 @@ if choice == 'Pipi das Meias Altas':
     with col1:
         st.header(" Coleção DVD1")
         st.image("12AF4C15-C421-478E-944C-8F42B9B50185.png")
-        Button1 = st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Core")
+        Button1 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Core")
     with col2:
         st.header("DVD 2 PIPI")
         st.image("07944EEF-7714-493A-94A0-D512BA71DF47.png")
-        Button2 = st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Alba")
+        Button2 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Alba")
     with col3:
         st.header("A Lassie")
         st.image("IMG_5123.png")
-        Button3=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Delta")
+        Button3=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Delta")
 if choice == 'O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("IMG_5131.png")
-        Button4=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Coresey")
+        Button4=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Coresey")
     with col2:
         st.image("IMG_5124.png")
-        Button5=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Ypsilon")
+        Button5=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Ypsilon")
     with col3:
         st.image("IMG_5130.png")
-        Button6=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="image")
+        Button6=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="image")
 if choice == " Filmes de Natal":
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("IMG_5131.png")
-        Button7=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Cosey")
+        Button7=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Cosey")
     with col2:
         st.image("IMG_5124.png")
-        Button8=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="Yplon")
+        Button8=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Yplon")
     with col3:
         st.image("IMG_5130.png")
-        Button9=st.number_input("Quantidade e adicione ao Carrinho",min_value=1, key="lta")
+        Button9=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="lta")
