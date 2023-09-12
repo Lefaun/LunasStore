@@ -132,9 +132,18 @@ if choice == " Filmes de Natal":
     with col1:
         st.image("IMG_5131.png")
         Button7=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Cosey")
+        REF7 = str("Floribela MEGA RI Fixe")
+        if Button7 >0:
+            Encomendas.append(REF7)
     with col2:
         st.image("IMG_5124.png")
         Button8=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Yplon")
+        REF8 = str("filme de Natal")
+        if Button8 >0:
+            Encomendas.append(REF8)
     with col3:
         st.image("IMG_5130.png")
         Button9=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="lta")
+        REF9 = str("Mundo de Barbie na Moda")
+        if Button9 >0:
+            Encomendas.append(REF9)
