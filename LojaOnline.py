@@ -151,7 +151,7 @@ if choice == " Filmes de Natal":
     with col1:
         st.header(Encomendas)
     with col2:
-        If Confirmar = st.button("Confirmar"):
+        if Confirmar = st.button("Confirmar"):
         email_form = st.form(key='my_email_form', clear_on_submit=False)
         email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
         
