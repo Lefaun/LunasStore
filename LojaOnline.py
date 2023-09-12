@@ -115,7 +115,7 @@ if choice == 'Pipi das Meias Altas':
             send_mail(email, subject, message, )
             st.subheader('  Mensagem enviada com Sucesso!') 
             st.write(Encomendas)
-            
+
 if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
     with col1:
