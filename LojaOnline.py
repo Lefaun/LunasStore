@@ -170,7 +170,7 @@ if choice == " Filmes de Natal":
         Confirmar = st.button("Confirmar")
 
     if Confirmar == True:
-        mail()
+        mail(email_form)
         st.write("Encomenda efetuada com Sucesso")
         
         
