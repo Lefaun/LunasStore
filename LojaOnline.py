@@ -151,5 +151,5 @@ if choice == " Filmes de Natal":
     with col1:
         st.header(Encomendas)
     with col2: 
-        st.change_page("Encomendar")
+        button6 = st.change_page("Encomendar")
 
