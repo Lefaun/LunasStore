@@ -44,7 +44,7 @@ def send_mail(email, subject, message):
 
 def mail_encomenda():
         
-    email_form = st.form(clear_on_submit=False)
+    email_form = st.form()
     email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
     
     subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
