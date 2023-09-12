@@ -168,7 +168,7 @@ if choice == " Filmes de Natal":
 
     if Confirmar == True:
         mail_encomenda(email_form, subject, email,message, encomenda)
-        send_mail()
+        send_mail(email, subject, message)
         
         
 
