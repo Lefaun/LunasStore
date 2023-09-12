@@ -53,7 +53,7 @@ with st.sidebar:
     message = email_form.text_area (label = ' Escreva a sua Mensagem ')
     encomenda = email_form.text_area (label = ' Artigos e Quantidade ')
     
-    if email_form.form_submit_button(label=' Enviar '):
+    if email_form.form_submit_button(label=' Enviar ', key="Function"):
         mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
         send_mail(email, subject, message, )
         st.subheader('  Mensagem enviada com Sucesso!')
@@ -101,7 +101,7 @@ if choice == 'Pipi das Meias Altas':
     with col1:
         st.header(Encomendas)
     with col2:
-        Confirmar = st.button("Confirmar")
+        Confirmar = st.submit_button("Confirmar")
     if Confirmar == True:
         email_form = st.form(key='my_email_form2', clear_on_submit=False)
         email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
