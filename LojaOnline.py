@@ -165,9 +165,10 @@ if choice == " Filmes de Natal":
     with col1:
         st.header(Encomendas)
     with col2: 
-        st.button(Label="Confirmar")
-        if st.button == True:
-            mail_encomenda()
+        Confirmar = st.button("Confirmar")
+
+    if Confirmar == True:
+        mail_encomenda()
         
         
 
