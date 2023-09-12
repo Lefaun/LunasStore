@@ -175,7 +175,7 @@ if choice == " Filmes de Natal":
         encomenda = email_form.text_area (label = ' Artigos e Quantidade ' , value = Encomendas)
         Submeter_Pedido = email_form.form_submit_button(label=' Submeter Pedido ')
     
-    if Submeter_Pedido:
+    if Submeter_Pedido == True:
         mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
         send_mail(email, subject, message)
         st.subheader('  Mensagem enviada com Sucesso!')
