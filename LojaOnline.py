@@ -110,7 +110,7 @@ if choice == 'Pipi das Meias Altas':
             message = email_form.text_area (label = ' Escreva a sua Mensagem ')
             encomenda = email_form.text_area (label = ' Artigos e Quantidade ', value = Encomendas )
     
-        if email_form.form_submit_button(label=' Enviar '):
+        if email_form.form_submit_button(label=' Enviar ' ,key="tupple"):
             mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
             send_mail(email, subject, message, )
             st.subheader('  Mensagem enviada com Sucesso!') 
