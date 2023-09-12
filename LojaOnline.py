@@ -176,11 +176,11 @@ if choice == " Filmes de Natal":
         message = email_form.text_area (label = ' Escreva a sua Mensagem ')
         encomenda = email_form.text_area (label = ' Artigos e Quantidade ', value = Encomendas )
     
-    if email_form.form_submit_button(label='Enviar'):
-        mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
-        send_mail(email, subject, message, )
-        st.subheader('  Mensagem enviada com Sucesso!') 
-        st.write(Encomendas)
+        if email_form.form_submit_button(label='Enviar'):
+            mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
+            send_mail(email, subject, message, )
+            st.subheader('  Mensagem enviada com Sucesso!') 
+            st.write(Encomendas)
         
         #email_form = st.form(key='my_email_form5', clear_on_submit=False)
         #email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
