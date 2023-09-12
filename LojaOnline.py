@@ -151,7 +151,6 @@ if choice == " Filmes de Natal":
     with col1:
         st.header(Encomendas)
     with col2: 
-        st.markdown('<a href="/Encomendar" target=_Top>Encomendar</a>', unsafe_allow_html=True)
-        button12= st.button( page='Encomendar')
-        button13 = st.change_page('Encomendar')
+        st.markdown('<a href="Encomendar" target=_Self>Encomendar</a>', unsafe_allow_html=True)
+        
 
