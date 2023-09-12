@@ -36,7 +36,7 @@ def send_mail(email, subject, message):
         password = 'qftabgvjolpfjniw'
         server.login(username, password)
         to_email = 'maillefaun@gmail.com'
-        server.sendmail(username, to_email, mensagem, )
+        server.sendmail(username, to_email, mensagem, Encomendas )
         
         server.close()
     except Exception as e:
@@ -55,7 +55,7 @@ with st.sidebar:
     
     if email_form.form_submit_button(label=' Enviar '):
         mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
-        send_mail(email, subject, message, )
+        send_mail(email, subject, message, Encomendas )
         st.subheader('  Mensagem enviada com Sucesso!')
     
     
