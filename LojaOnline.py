@@ -150,16 +150,17 @@ if choice == " Filmes de Natal":
     col1, col2 =st.columns(2)
     with col1:
         st.header(Encomendas)
-    with col2:
-        if st.button("Confirmar"):
-            email_form = st.form(key='my_email_form4', clear_on_submit=False)
-            email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
-            
-            subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
-            message = email_form.text_area (label = ' Escreva a sua Mensagem ')
-            encomenda = email_form.text_area (label = ' Artigos e Quantidade ' , value = Encomendas)
-        
-            if email_form.form_submit_button(label=' Enviar ' ,key='Double'):
-                mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
-                send_mail(email, subject, message,  )
-                st.subheader('  Mensagem enviada com Sucesso!')
+    with col2: 
+        st.button("Confirmar", key="Id3"):
+if st.button("Confirmar"):
+    email_form = st.form(key='my_email_form4', clear_on_submit=False)
+    email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
+    
+    subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
+    message = email_form.text_area (label = ' Escreva a sua Mensagem ')
+    encomenda = email_form.text_area (label = ' Artigos e Quantidade ' , value = Encomendas)
+
+    if email_form.form_submit_button(label=' Enviar ' ,key='Double'):
+        mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
+        send_mail(email, subject, message,  )
+        st.subheader('  Mensagem enviada com Sucesso!')
