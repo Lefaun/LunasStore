@@ -154,7 +154,7 @@ if choice == " Filmes de Natal":
         Confirmar = st.button("Confirmar" ,key = "Id3")
 
     if Confirmar == True:
-i
+
     email_form = st.form(key='my_email_form4', clear_on_submit=False)
     email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
     
