@@ -43,9 +43,9 @@ def send_mail(email, subject, message):
     except Exception as e:
         st.error(f' Ocorreu um Erro ao enviar o e-mail, Desculpe: {e}')
 
-def mail(email_form):
+def mail(email_form, send_mail):
         
-    email_form = st.form(key='my_email_form9', clear_on_submit=False)
+    email_form = st.form(key='my_email_form', clear_on_submit=False)
     email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
     
     subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
@@ -170,7 +170,7 @@ if choice == " Filmes de Natal":
         Confirmar = st.button("Confirmar")
 
     if Confirmar == True:
-        mail(email_form)
+        mail(email_form, send_mail)
         st.write("Encomenda efetuada com Sucesso")
         
         
