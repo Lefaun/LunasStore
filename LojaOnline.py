@@ -66,7 +66,7 @@ if choice == 'Encomendar':
     
     subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
     message = email_form.text_area (label = ' Escreva a sua Mensagem ')
-    encomenda = email_form.text_area (label = ' Artigos e Quantidade ')
+    encomenda = email_form.text_area (label = ' Artigos e Quantidade ', value = Encomendas )
     
     if email_form.form_submit_button(label=' Enviar '):
         mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
@@ -97,7 +97,13 @@ if choice == 'Pipi das Meias Altas':
         REF3 = str("Encomenda Lassie")
         if Button3 >0:
             Encomendas.append(REF3)
-    st.title(Encomendas)
+    col1, col2 =st.columns(2)
+    with col1:
+        st.header(Encomendas)
+    with col2:
+        Confirmar = st.button("Confirmar")
+        if Confirmar == True:
+            encomenda.append(Encomendas)
 if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
     with col1:
