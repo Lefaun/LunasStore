@@ -167,7 +167,7 @@ if choice == " Filmes de Natal":
         Confirmar = st.button("Confirmar")
 
     if Confirmar == True:
-        mail_encomenda(email_form, subject, email,message,messagem, encomenda)
+        mailcom(email_form, subject, email,message,messagem, encomenda)
         
         
 
