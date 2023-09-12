@@ -21,7 +21,7 @@ import numpy as np
 
 st.title(" A Loja online da Luna -  Livraria e DVDs e Séries")
 st.write("adiciona ao teu carrinho ou segue pela opção Encomendar no menu lateral ou nas opções da página")
-Menu=("Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", " Livros de Aventura", " Livros de Ciencia", "Encomendar")
+Menu=("Encomendar","Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", " Livros de Aventura", " Livros de Ciencia", )
 
 choice = st.selectbox("Selecione uma Opção", Menu)
 Encomendas = []
