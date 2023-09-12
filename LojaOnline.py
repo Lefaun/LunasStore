@@ -147,3 +147,8 @@ if choice == " Filmes de Natal":
         REF9 = str("Mundo de Barbie na Moda")
         if Button9 >0:
             Encomendas.append(REF9)
+    col1, col2 =st.columns(2)
+    with col1:
+        st.header(Encomendas)
+    with col2:
+        Confirmar = st.button("Confirmar")
