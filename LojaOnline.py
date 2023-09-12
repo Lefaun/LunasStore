@@ -176,7 +176,7 @@ if choice == " Filmes de Natal":
     
     if email_form.form_submit_button(label=' Enviar '):
         mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
-        send_mail(email, subject, message,  )
+        send_mail(email, subject, message)
         st.subheader('  Mensagem enviada com Sucesso!')
 
         
