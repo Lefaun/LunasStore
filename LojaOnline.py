@@ -151,5 +151,5 @@ if choice == " Filmes de Natal":
     with col1:
         st.header(Encomendas)
     with col2: 
-        Confirmar = st.button("Confirmar" ,key = "Id3", page="Encomendar")
+        st.button("Confirmar" ,key = "Id3", page="Encomendar")
 
