@@ -47,7 +47,7 @@ class EmailSend():
     def __init__(self, mail):
         self.mail = mail
         
-    def mail(email_form, email, subject, message, encomenda, mensagem):
+    def mail(email_form, email, subject, message, encomenda):
             
         email_form = st.form(key='my_email_form8', clear_on_submit=False)
         email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
@@ -123,7 +123,7 @@ if choice == 'Pipi das Meias Altas':
         Confirmar = st.button("Confirmar")
 
     if Confirmar == True:
-        EmailSend.mail(email_form, email, subject, message, encomenda, mensagem)
+        EmailSend.mail(email_form, email, subject, message, encomenda,)
         
 if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
