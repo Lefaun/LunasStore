@@ -278,14 +278,14 @@ if choice == " Livros de Ciencia":
     with col1:
         st.header(" Livro De Psicologia")
         st.image("Psicologia.jpeg")
-        Button30 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Core2")
+        Button30 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Core21")
         REF30 = str("Livro De Psicologia- 12€")
         if Button30 >0:
             Encomendas.append(REF30)
     with col2:
         st.header("Livro - Nação Dopamina")
         st.image("dopamina.jpeg")
-        Button21 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Alba2")
+        Button31 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Alba21")
         REF31 = str("Livro - Nação Dopamina 15€")
         if Button31 >0:
             Encomendas.append(REF31)
