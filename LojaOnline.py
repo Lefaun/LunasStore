@@ -272,6 +272,7 @@ if choice == " Livros de Ciencia":
         REF23 = str("10 Revistas - 15€")
         if Button23 >0:
             Encomendas.append(REF23)
+    
     col1, col2, col3 st.columns(3)
         
     with col1:
@@ -292,22 +293,22 @@ if choice == " Livros de Ciencia":
         st.header("Coleção de Livros")
         
     
-    st.header(Encomendas)
-
-    Confirmar = st.button("Confirmar")
+        st.header(Encomendas)
     
-    email_form = st.form(key='my_email_for7', clear_on_submit=False)
-    email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
+        Confirmar = st.button("Confirmar")
+        
+        email_form = st.form(key='my_email_for7', clear_on_submit=False)
+        email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
+        
+        subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
+        message = email_form.text_area (label = ' Escreva a sua Mensagem ')
+        encomenda = email_form.text_area (label = ' Artigos e Quantidade ', value = Encomendas )
     
-    subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
-    message = email_form.text_area (label = ' Escreva a sua Mensagem ')
-    encomenda = email_form.text_area (label = ' Artigos e Quantidade ', value = Encomendas )
-
-    if email_form.form_submit_button(label='Enviar'):
-        mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
-        send_mail(email, subject, message, )
-        st.subheader('  Mensagem enviada com Sucesso!') 
-        st.write(Encomendas)
+        if email_form.form_submit_button(label='Enviar'):
+            mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
+            send_mail(email, subject, message, )
+            st.subheader('  Mensagem enviada com Sucesso!') 
+            st.write(Encomendas)
         
         #email_form = st.form(key='my_email_form5', clear_on_submit=False)
         #email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
