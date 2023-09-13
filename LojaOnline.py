@@ -272,6 +272,25 @@ if choice == " Livros de Ciencia":
         REF23 = str("10 Revistas - 15€")
         if Button23 >0:
             Encomendas.append(REF23)
+    col1, col2, col3 st.columns(3)
+        
+    with col1:
+        st.header(" Livro De Psicologia")
+        st.image("Psicologia.jpeg")
+        Button30 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Core2")
+        REF30 = str("Livro De Psicologia- 12€")
+        if Button30 >0:
+            Encomendas.append(REF30)
+    with col2:
+        st.header("Livro - Nação Dopamina")
+        st.image("dopamina.jpeg")
+        Button21 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Alba2")
+        REF31 = str("Livro - Nação Dopamina 15€")
+        if Button31 >0:
+            Encomendas.append(REF31)
+    with col3:
+        st.header("Coleção de Livros")
+        
     
     st.header(Encomendas)
 
