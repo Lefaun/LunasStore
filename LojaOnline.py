@@ -164,14 +164,14 @@ if choice == ' O Mundo de Patty':
         st.image("IMG_5124.png")
         Button5=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Ypsilon")
         REF5 = str("Mundo Patty2")
-        if Button7 >0:
+        if Button5 >0:
             Encomendas.append(REF5)
     with col3:
         st.image("IMG_5130.png")
         Button6=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="image")
         REF6 = str("Floribela MEGA RI Fixe")
         if Button6 >0:
-            Encomendas.append(REF7)
+            Encomendas.append(REF6)
     col1, col2 =st.columns(2)
     with col1:
         st.header(Encomendas)
