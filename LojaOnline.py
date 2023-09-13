@@ -43,19 +43,23 @@ def send_mail(email, subject, message):
     except Exception as e:
         st.error(f' Ocorreu um Erro ao enviar o e-mail, Desculpe: {e}')
 
-def mail(email_form, email, subject, message, encomenda, mensagem):
+class EmailSend():
+    def __init__(self, mail):
+        self.mail = mail
         
-    email_form = st.form(key='my_email_form8', clear_on_submit=False)
-    email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
-    
-    subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
-    message = email_form.text_area (label = ' Escreva a sua Mensagem ')
-    encomenda = email_form.text_area (label = ' Artigos e Quantidade ' , value = Encomendas)
-    
-    if email_form.form_submit_button(label=' Enviar '):
-        mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
-        send_mail(email, subject, message,  )
-        st.subheader('  Mensagem enviada com Sucesso!')
+    def mail(email_form, email, subject, message, encomenda, mensagem):
+            
+        email_form = st.form(key='my_email_form8', clear_on_submit=False)
+        email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
+        
+        subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
+        message = email_form.text_area (label = ' Escreva a sua Mensagem ')
+        encomenda = email_form.text_area (label = ' Artigos e Quantidade ' , value = Encomendas)
+        
+        if email_form.form_submit_button(label=' Enviar '):
+            mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
+            send_mail(email, subject, message,  )
+            st.subheader('  Mensagem enviada com Sucesso!')
 
 with st.sidebar:
 
@@ -119,17 +123,7 @@ if choice == 'Pipi das Meias Altas':
         Confirmar = st.button("Confirmar")
 
     if Confirmar == True:
-        email_form = st.form(key='my_email_form', clear_on_submit=False)
-        email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
-        
-        subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
-        message = email_form.text_area (label = ' Escreva a sua Mensagem ')
-        encomenda = email_form.text_area (label = ' Artigos e Quantidade ' , value = Encomendas)
-        
-        if email_form.form_submit_button(label=' Enviar '):
-            mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
-            send_mail(email, subject, message)
-            st.subheader('  Mensagem enviada com Sucesso!')
+        Self.mail()
         
 if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
