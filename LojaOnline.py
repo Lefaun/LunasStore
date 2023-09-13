@@ -140,7 +140,7 @@ if choice == 'Pipi das Meias Altas':
 
     if Confirmar == True:
         EmailSend.mail(email_form, email, subject, message, encomenda,)
-        EmailSend.send_mail(email, subject, message, )
+        EmailSend.send_mail(email, subject, message,)
         
 if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
