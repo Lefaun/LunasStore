@@ -256,7 +256,7 @@ if choice == " Livros de Ciencia":
         st.image("Revista_NG_Cerebro.jpeg")
         Button20 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Core2")
         REF20 = str("Revista National Geographic Cérebro- 15€")
-        if Button1 >0:
+        if Button20 >0:
             Encomendas.append(REF20)
     with col2:
         st.header("Revista Monocle")
