@@ -162,20 +162,20 @@ if choice == ' O Mundo de Patty':
             Encomendas.append(REF4)
     with col2:
         st.image("Mundo de Patty2.jpeg")
-        Button5=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Ypsilon")
+        Button5=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Ypsilon2")
         REF5 = str("Mundo Patty2")
         if Button5 >0:
             Encomendas.append(REF5)
     with col3:
         st.image("Mundo de Patty3.jpeg")
-        Button6=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="image")
+        Button6=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="image2")
         REF6 = str("Mundo Patty3")
         if Button6 >0:
             Encomendas.append(REF6)
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("Mundo de Patty4.jpeg")
-        Button10=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Coresey")
+        Button10=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Coresey2")
         REF10 = str("Mundo de Patty4")
         if Button4 >0:
             Encomendas.append(REF10)
