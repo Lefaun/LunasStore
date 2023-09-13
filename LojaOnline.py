@@ -249,7 +249,7 @@ if choice == " Filmes de Natal":
             st.write(Encomendas)
     
 if choice == " Livros de Ciencia":
-    col1, col2, col3 = st.columns(3):
+    col1, col2, col3 = st.columns(3)
         
     with col1:
         st.header(" Revista National Geographic")
@@ -273,7 +273,7 @@ if choice == " Livros de Ciencia":
         if Button23 >0:
             Encomendas.append(REF23)
     
-    col1, col2, col3 st.columns(3)
+    col1, col2, col3 = st.columns(3)
         
     with col1:
         st.header(" Livro De Psicologia")
