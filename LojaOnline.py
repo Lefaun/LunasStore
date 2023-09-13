@@ -157,38 +157,38 @@ if choice == ' O Mundo de Patty':
     with col1:
         st.image("Mundo de Patty1.jpeg")
         Button4=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Coresey")
-        REF4 = str("Mundo de Patty 1")
+        REF4 = str("Mundo de Patty 1 - Unidade 3€")
         if Button4 >0:
             Encomendas.append(REF4)
     with col2:
         st.image("Mundo de Patty2.jpeg")
         Button5=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Ypsilon2")
-        REF5 = str("Mundo Patty2")
+        REF5 = str("Mundo Patty2 - Coleção 5 DVD : 5€")
         if Button5 >0:
             Encomendas.append(REF5)
     with col3:
         st.image("Mundo de Patty3.jpeg")
         Button6=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="image2")
-        REF6 = str("Mundo Patty3")
+        REF6 = str("Mundo Patty3- Unidade 3€")
         if Button6 >0:
             Encomendas.append(REF6)
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("Mundo de Patty4.jpeg")
         Button10=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Coresey2")
-        REF10 = str("Mundo de Patty4")
+        REF10 = str("Mundo de Patty4C-oleção 5 DVD : 5€")
         if Button4 >0:
             Encomendas.append(REF10)
     with col2:
         st.image("Mundo de Patty5.jpeg")
         Button11=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Ypsilon")
-        REF11 = str("Mundo Patty5")
+        REF11 = str("Mundo Patty5- Unidade 3€")
         if Button11 >0:
             Encomendas.append(REF11)
     with col3:
         st.image("Mundo de Patty6.jpeg")
         Button12=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="image")
-        REF12 = str("Floribela MEGA RI Fixe")
+        REF12 = str("Mundo Patty6- Unidade 3€")
         if Button12 >0:
             Encomendas.append(REF12)
     
