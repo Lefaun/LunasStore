@@ -172,7 +172,7 @@ if choice == ' O Mundo de Patty':
         REF6 = str("Floribela MEGA RI Fixe")
         if Button6 >0:
             Encomendas.append(REF7)
-    col1, col2 st.columns(2)
+    col1, col2 st.columns(2):
     with col1:
         Confirmar = st.button("Confirmar")
     with col2:
