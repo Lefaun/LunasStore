@@ -157,14 +157,25 @@ if choice == ' O Mundo de Patty':
     with col1:
         st.image("IMG_5131.png")
         Button4=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Coresey")
+        REF4 = str("Mundo de Patty 1")
+        if Button4 >0:
+            Encomendas.append(REF4)
     with col2:
         st.image("IMG_5124.png")
         Button5=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Ypsilon")
+        REF5 = str("Mundo Patty2")
+        if Button7 >0:
+            Encomendas.append(REF5)
     with col3:
         st.image("IMG_5130.png")
         Button6=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="image")
+        REF6 = str("Floribela MEGA RI Fixe")
+        if Button6 >0:
+            Encomendas.append(REF7)
+    col1, col2 st.columns(2)
+    with col1:
         Confirmar = st.button("Confirmar")
-        
+    with col2:
         email_form = st.form(key='my_email_form9', clear_on_submit=False)
         email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
         
@@ -177,6 +188,7 @@ if choice == ' O Mundo de Patty':
             send_mail(email, subject, message, )
             st.subheader('  Mensagem enviada com Sucesso!') 
             st.write(Encomendas)
+            
 if choice == " Filmes de Natal":
     col1, col2, col3 = st.columns(3)
     with col1:
