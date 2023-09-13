@@ -62,7 +62,7 @@ class EmailSend():
         except Exception as e:
             st.error(f' Ocorreu um Erro ao enviar o e-mail, Desculpe: {e}')
         
-    def mail(email_form, email, subject, message, encomenda):
+    def mail(email_form, email, subject, message, encomenda, mensagem):
             
         email_form = st.form(key='my_email_form4', clear_on_submit=False)
         email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
@@ -139,8 +139,8 @@ if choice == 'Pipi das Meias Altas':
         Confirmar = st.button("Confirmar")
 
     if Confirmar == True:
-        EmailSend.mail(email_form, email, subject, message, encomenda,)
-        EmailSend.send_mail(email, subject, message, )
+        EmailSend.mail(email_form, email, subject, message, encomenda, mensagem)
+        EmailSend.send_mail(email, subject, message,  )
         
 if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
