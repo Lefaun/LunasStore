@@ -172,11 +172,13 @@ if choice == ' O Mundo de Patty':
         REF6 = str("Floribela MEGA RI Fixe")
         if Button6 >0:
             Encomendas.append(REF7)
-    col1, col2 st.columns(2):
+    col1, col2 =st.columns(2)
     with col1:
-        Confirmar = st.button("Confirmar")
+        st.header(Encomendas)
     with col2:
-        email_form = st.form(key='my_email_form9', clear_on_submit=False)
+        Confirmar = st.button("Confirmar")
+        
+        email_form = st.form(key='my_email_form2', clear_on_submit=False)
         email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
         
         subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
@@ -188,6 +190,7 @@ if choice == ' O Mundo de Patty':
             send_mail(email, subject, message, )
             st.subheader('  Mensagem enviada com Sucesso!') 
             st.write(Encomendas)
+
             
 if choice == " Filmes de Natal":
     col1, col2, col3 = st.columns(3)
