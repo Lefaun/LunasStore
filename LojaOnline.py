@@ -254,22 +254,22 @@ if choice == " Filmes de Natal":
         with col1:
             st.header(" Revista National Geographic")
             st.image("Revista_NG_Cerebro.jpeg")
-            Button20 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Core")
+            Button20 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Core2")
             REF20 = str("Revista National Geographic Cérebro- 15€")
             if Button1 >0:
                 Encomendas.append(REF20)
         with col2:
             st.header("Revista Monocle")
             st.image("Monocle.jpeg")
-            Button21 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Alba")
+            Button21 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Alba2")
             REF21 = str("Revista Cultura e artes - Monocle - unidade 13€")
             if Button21 >0:
                 Encomendas.append(REF21)
         with col3:
             st.header("Coleção Revistas VIsão e Sábado")
             st.image("IMG_5123.png")
-            Button23=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Delta")
-            REF33 = str("10 Revistas - 15€")
+            Button23=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Delta2")
+            REF23 = str("10 Revistas - 15€")
             if Button23 >0:
                 Encomendas.append(REF23)
         
