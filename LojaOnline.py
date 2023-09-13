@@ -138,8 +138,6 @@ if choice == 'Pipi das Meias Altas':
         st.header(Encomendas)
     with col2:
         Confirmar = st.button("Confirmar")
-
-    if Confirmar == True:
         
         email_form = st.form(key='my_email_form2', clear_on_submit=False)
         email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
