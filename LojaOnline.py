@@ -140,9 +140,9 @@ if choice == 'Pipi das Meias Altas':
         Confirmar = st.button("Confirmar")
 
     if Confirmar == True:
-        EmailSend(self.mail,self.send_mail)
-        #self.mail(email_form, email, subject, message, encomenda,)
-        #self.send_mail(email, subject, message,)
+        
+       EmailSend.mail(email_form, email, subject, message, encomenda,)
+       EmailSend.send_mail(email, subject, message,)
         
 if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
