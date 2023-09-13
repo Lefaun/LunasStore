@@ -140,7 +140,7 @@ if choice == 'Pipi das Meias Altas':
         Confirmar = st.button("Confirmar")
 
     if Confirmar == True:
-        EmailSend(mail,send_mail)
+        EmailSend(self.mail,self.send_mail)
         #self.mail(email_form, email, subject, message, encomenda,)
         #self.send_mail(email, subject, message,)
         
