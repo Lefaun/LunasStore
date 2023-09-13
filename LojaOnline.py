@@ -48,19 +48,19 @@ class EmailSend():
         self.mail = mail
     
     def send_mail(email, subject, message):
-    try:
-        server = smtplib.SMTP('smtp.gmail.com',587)
-        server.ehlo()
-        server.starttls()
-        username = 'maillefaun@gmail.com'
-        password = 'qftabgvjolpfjniw'
-        server.login(username, password)
-        to_email = 'maillefaun@gmail.com'
-        server.sendmail(username, to_email, mensagem,  )
-        
-        server.close()
-    except Exception as e:
-        st.error(f' Ocorreu um Erro ao enviar o e-mail, Desculpe: {e}')
+        try:
+            server = smtplib.SMTP('smtp.gmail.com',587)
+            server.ehlo()
+            server.starttls()
+            username = 'maillefaun@gmail.com'
+            password = 'qftabgvjolpfjniw'
+            server.login(username, password)
+            to_email = 'maillefaun@gmail.com'
+            server.sendmail(username, to_email, mensagem,  )
+            
+            server.close()
+        except Exception as e:
+            st.error(f' Ocorreu um Erro ao enviar o e-mail, Desculpe: {e}')
         
     def mail(email_form, email, subject, message, encomenda):
             
