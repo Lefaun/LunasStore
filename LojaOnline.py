@@ -44,10 +44,11 @@ def send_mail(email, subject, message):
         st.error(f' Ocorreu um Erro ao enviar o e-mail, Desculpe: {e}')
 
 class EmailSend():
-    def __init__(self, mail):
+    def __init__(self, mail, send_mail):
         self.mail = mail
+        self.send_mail = send_mail
     
-    def send_mail(email, subject, message, ):
+    def send_mail(email, subject, message):
         try:
             server = smtplib.SMTP('smtp.gmail.com',587)
             server.ehlo()
