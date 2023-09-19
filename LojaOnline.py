@@ -80,7 +80,24 @@ class EmailSend():
 
 with st.sidebar:
 
-    st.image("AI_Monster_Book_eater.png" , width=300)  
+    st.image("AI_Monster_Book_eater.png" , width=300)
+    url = f"https://docs.google.com/spreadsheets/d/{search}/gviz/tq?tqx=out:csv&sheet={search}"
+    df = pd.read_csv(url, dtype=str)
+    
+    # Page setup
+    st.set_page_config(page_title="Python Talks Search Engine", page_icon="🐍", layout="wide")
+    st.title("Python Talks Search Engine")
+    
+    # Connect to the Google Sheet
+    sheet_id = "https://docs.google.com/spreadsheets/d/1cRZcbJAjLzwoLzA4K1R_ldnjXMU1obLDKjWCR5prsAU/edit?usp=sharing"
+    sheet_name = "search"
+    url = f"<https://docs.google.com/spreadsheets/d/{search}/gviz/tq?tqx=out:csv&sheet={search}>"
+    df = pd.read_csv(url, dtype=str).fillna("")
+
+
+    # Show the dataframe (we'll delete this later)
+
+    
     email_form = st.form(key='my_email_form', clear_on_submit=False)
     email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
     
@@ -193,7 +210,7 @@ if choice == ' O Mundo de Patty':
             Encomendas.append(REF12)
     
     st.header(Encomendas)
-
+    st.write(df)
     Confirmar = st.button("Confirmar")
     
     email_form = st.form(key='my_email_form2', clear_on_submit=False)
