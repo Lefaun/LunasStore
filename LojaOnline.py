@@ -81,8 +81,7 @@ class EmailSend():
 with st.sidebar:
 
     st.image("AI_Monster_Book_eater.png" , width=300)
-    url = (f"https://docs.google.com/spreadsheets/d/{search}/gviz/tq?tqx=out:csv&sheet={search}")
-    df = pd.read_csv(url, dtype=str)
+    
     
     
 
