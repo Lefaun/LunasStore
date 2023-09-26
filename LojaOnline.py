@@ -39,9 +39,9 @@ class ListarNome():
         st.write("Os nomes que constam da lista são:")
         #for livro in self.Livros:
         
-        open('Lista_de_Livros - Folha1.csv', 'rb') as f:
+        with open('Lista_de_Livros - Folha1.csv', 'rb') as f:
             reader = csv.reader(f)
-            st.write(reader)
+            st.write(df)
             
     def Consultar(self):
         livro = st.text_input("Consulte um Livro")
