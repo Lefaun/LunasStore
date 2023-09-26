@@ -46,33 +46,33 @@ class ListarNome():
         else:
             print(f"este {livro} não encontra-se na Lista")
     def Menu_Completo(self):
-        while True:
-            st.write("Escolha uma opção:")
-            st.write("1. Adicionar à Lista")
-            st.write("2. Remover da Lista")
-            st.write("3. Consultar Lista")
-            st.write("4. Consultar um Livro")
-            st.write("5. Sair do Programa")
-            opcao = text_input("Escolha uma opção - por favor:")
+        
+        st.write("Escolha uma opção:")
+        st.write("1. Adicionar à Lista")
+        st.write("2. Remover da Lista")
+        st.write("3. Consultar Lista")
+        st.write("4. Consultar um Livro")
+        st.write("5. Sair do Programa")
+        opcao = text_input("Escolha uma opção - por favor:")
 
-            if opcao == "1":
-                livro  = text_input("Qual o Livro que pretende encomendar: ")
-                self.add_Nome(livro)
-            elif opcao == "2":
-                nome = text_input("Qual o Livro que pretende remover: ")
-                self.tirar_Nome(livro)
-            elif opcao == "3":
-                self.Listar_Nome()
-            elif opcao == "4":
-                self.Consultar()
-            elif opcao == "5":
-                print("Sair")
-                break
+        if opcao == "1":
+            livro  = text_input("Qual o Livro que pretende encomendar: ")
+            self.add_Nome(livro)
+        elif opcao == "2":
+            nome = text_input("Qual o Livro que pretende remover: ")
+            self.tirar_Nome(livro)
+        elif opcao == "3":
+            self.Listar_Nome()
+        elif opcao == "4":
+            self.Consultar()
+        elif opcao == "5":
+            print("Sair")
+            break
 
-            df = pd.DataFrame(self.Livros)
-    # Alteração de Teste na Criação do CSV
-            df.to_csv("Lista_de_Livros.csv", sep=",")
-            st.write(df)
+        df = pd.DataFrame(self.Livros)
+# Alteração de Teste na Criação do CSV
+        df.to_csv("Lista_de_Livros.csv", sep=",")
+        st.write(df)
 
 
 
