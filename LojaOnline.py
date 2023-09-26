@@ -72,7 +72,35 @@ class ListarNome():
         df = pd.DataFrame(self.Livros)
 # Alteração de Teste na Criação do CSV
         df.to_csv("Lista_de_Livros - Folha1.csv", sep=",")
-        st.write(df)
+        st.write(df)    
+        with open('Lista_de_Livros - Folha1.csv', 'rb') as f:
+            reader = csv.reader(f)
+        
+            # pop header row (1st row in csv)
+            header = reader.next()
+        
+            # loop through each line in csv and transform
+            for line in reader:
+        
+                # if the line is blank, skip this and keep going
+                if not line: continue
+        
+                data.append(transform_row(line))
+        
+        with open('Lista_de_Livros - Folha1.csv', 'w') as f:
+            # define new csv writer
+            writer = csv.writer(f, delimiter=',')
+        
+            # write a header row to our output.csv file
+            writer.writerow([
+                'Livros',
+                'Preço',
+                'Revistas'
+            ])
+        
+            # write our data to the file
+            writer.writerows(self.Livros)
+       
 
 
 
