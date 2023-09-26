@@ -37,8 +37,10 @@ class ListarNome():
 
     def Listar_Nome(self):
         st.write("Os nomes que constam da lista são:")
-        for livro in self.Livros:
-            st.write(livro)
+        #for livro in self.Livros:
+        
+        transform_row(row)
+        st.write(reader)
     def Consultar(self):
         livro = st.text_input("Consulte um Livro")
         if livro in self.Livros:
@@ -75,9 +77,9 @@ class ListarNome():
     data = []
 
     def transform_row(row):
-        title = line[0]
-        release_date = int(line[1])
-        director = line[2]
+        Livro = line[0]
+        Revista = int(line[1])
+        Preo = line[2]
     
         return [
     
