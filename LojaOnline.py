@@ -19,8 +19,68 @@ import streamlit as st
 import smtplib
 import numpy as np
 
+import pandas as pd
+
+class ListarNome():
+    def __init__(self):
+        self.Livros = []
+
+    def add_Nome(self, livro):
+        self.Livros.append(livro)
+
+    def tirar_Nome(self, livro):
+        if livro in self.Livros:
+            self.Livros.remove(livro)
+            print(f"O {Livro} foi removido da lista com sucesso.")
+        else:
+            print("O Livro introduzido não é válido.")
+
+    def Listar_Nome(self):
+        print("Os nomes que constam da lista são:")
+        for livro in self.Livros:
+            print(livro)
+    def Consultar(self):
+        livro = input("Consulte um Livro")
+        if livro in self.Livros:
+            print(f"este {livro} encontra-se na Lista")
+        else:
+            print(f"este {livro} não encontra-se na Lista")
+    def Menu_Completo(self):
+        while True:
+            st.write("Escolha uma opção:")
+            st.write("1. Adicionar à Lista")
+            st.write("2. Remover da Lista")
+            st.write("3. Consultar Lista")
+            st.write("4. Consultar um Livro")
+            st.write("5. Sair do Programa")
+            opcao = text_input("Escolha uma opção - por favor:")
+
+            if opcao == "1":
+                livro  = text_input("Qual o Livro que pretende encomendar: ")
+                self.add_Nome(livro)
+            elif opcao == "2":
+                nome = text_input("Qual o Livro que pretende remover: ")
+                self.tirar_Nome(livro)
+            elif opcao == "3":
+                self.Listar_Nome()
+            elif opcao == "4":
+                self.Consultar()
+            elif opcao == "5":
+                print("Sair")
+                break
+
+            df = pd.DataFrame(self.Livros)
+    # Alteração de Teste na Criação do CSV
+            df.to_csv("Lista_de_Livros.csv", sep=",")
+            st.write(df)
+
+
+
+
+
 st.title(" A Loja online da Luna -  Livraria e DVDs e Séries")
 st.write("adiciona ao teu carrinho ou segue pela opção Encomendar no menu lateral ou nas opções da página")
+
 Menu=("Encomendar","Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", " Livros de Aventura", " Livros de Ciencia", )
 components.html(
     """<!-- Hotjar Tracking Code for https://lunastore.streamlit.app/ -->
@@ -112,6 +172,8 @@ with st.sidebar:
     
     
 if choice == 'Encomendar':
+    lista_nomes = ListarNome()
+    lista_nomes.Menu_Completo()
     
     email_form = st.form(key='my_email_form2', clear_on_submit=False)
     email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
