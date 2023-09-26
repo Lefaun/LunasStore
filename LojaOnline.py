@@ -75,24 +75,24 @@ class ListarNome():
     data = []
 
     def transform_row(row):
-            title = line[0]
-            release_date = int(line[1])
-            director = line[2]
-        
-            return [
-        
-                # column 1
-                Livro,
-        
-                # column 2: subtract 1000 from the year
-                release_date - 1000,
-        
-                # column 4: empty column
-                Revista,
-        
-                # column 3
-                Preco
-            ]
+        title = line[0]
+        release_date = int(line[1])
+        director = line[2]
+    
+        return [
+    
+            # column 1
+            Livro,
+    
+            # column 2: subtract 1000 from the year
+            release_date - 1000,
+    
+            # column 4: empty column
+            Revista,
+    
+            # column 3
+            Preco
+        ]
         
         # read csv file line by line
         with open('Lista_de_Livros - Folha1.csv', 'rb') as f:
@@ -125,7 +125,7 @@ class ListarNome():
             writer.writerows(data)
             st.write(reader)
         
-
+        
 
 
 
