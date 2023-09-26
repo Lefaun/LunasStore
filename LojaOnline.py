@@ -40,7 +40,7 @@ class ListarNome():
         #for livro in self.Livros:
         
         file = open('Lista_de_Livros - Folha1.csv')
-            st.write(file)
+        st.write(file)
             
     def Consultar(self):
         livro = st.text_input("Consulte um Livro")
