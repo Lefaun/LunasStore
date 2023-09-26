@@ -66,8 +66,8 @@ class ListarNome():
         elif opcao == "4":
             self.Consultar()
         elif opcao == "5":
-            print("Sair")
-            break
+            st.write("Sair")
+            
 
         df = pd.DataFrame(self.Livros)
 # Alteração de Teste na Criação do CSV
