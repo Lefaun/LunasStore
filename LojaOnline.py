@@ -31,20 +31,20 @@ class ListarNome():
     def tirar_Nome(self, livro):
         if livro in self.Livros:
             self.Livros.remove(livro)
-            print(f"O {Livro} foi removido da lista com sucesso.")
+            st.write(f"O {Livro} foi removido da lista com sucesso.")
         else:
-            print("O Livro introduzido não é válido.")
+            st.write("O Livro introduzido não é válido.")
 
     def Listar_Nome(self):
-        print("Os nomes que constam da lista são:")
+        st.write("Os nomes que constam da lista são:")
         for livro in self.Livros:
-            print(livro)
+            st.write(livro)
     def Consultar(self):
-        livro = input("Consulte um Livro")
+        livro = st.text_input("Consulte um Livro")
         if livro in self.Livros:
-            print(f"este {livro} encontra-se na Lista")
+            st.write(f"este {livro} encontra-se na Lista")
         else:
-            print(f"este {livro} não encontra-se na Lista")
+            st.write(f"este {livro} não encontra-se na Lista")
     def Menu_Completo(self):
         
         st.write("Escolha uma opção:")
@@ -53,13 +53,13 @@ class ListarNome():
         st.write("3. Consultar Lista")
         st.write("4. Consultar um Livro")
         st.write("5. Sair do Programa")
-        opcao = text_input("Escolha uma opção - por favor:")
+        opcao = st.text_input("Escolha uma opção - por favor:")
 
         if opcao == "1":
-            livro  = text_input("Qual o Livro que pretende encomendar: ")
+            livro  = st.text_input("Qual o Livro que pretende encomendar: ")
             self.add_Nome(livro)
         elif opcao == "2":
-            nome = text_input("Qual o Livro que pretende remover: ")
+            nome = st.text_input("Qual o Livro que pretende remover: ")
             self.tirar_Nome(livro)
         elif opcao == "3":
             self.Listar_Nome()
