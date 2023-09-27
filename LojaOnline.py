@@ -70,8 +70,8 @@ class ListarNome():
     def Consultar(self):
         Search = st.text_input("Consulte um Livro")
         with open('Lista_de_Livros - Folha1.csv', 'r') as file:
-            data = csv.reader(file)
-            df = pd.DataFrame(reader)
+            reader = csv.reader(file)
+            data = pd.DataFrame(reader)
             if Search in data['Livros'].values:
                 linha_item = data[data['Livros']==Search]
 
