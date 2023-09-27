@@ -71,13 +71,14 @@ class ListarNome():
         item_procurado= st.text_input("Consulte um Livro")
         df = pd.read_csv('Lista_de_Livros - Folha1.csv')
         st.write(df)
-        Livros_a_Verificar = pd.read_csv('Lista_de_Livros - Folha1.csv')
+        #Livros_a_Verificar = pd.read_csv('Lista_de_Livros - Folha1.csv')
         #filter =  [Search in Livros_a_Verificar for livro in df['Livros']]
         # create a sample DataFrame
         #df = pd.DataFrame({'fruit': ['apple', 'banana', 'pear', 'kiwi', 'orange']})
         
         # create a list of fruits we are interested in
-        #Livros_a_Verificar = ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3','O Mundo de Patty', 'Filme de Natal']
+        df = pd.DataFrame({'Livros': ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3']})
+        Livros_a_Verificar = ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3','O Mundo de Patty', 'Filme de Natal']
         
         # check if the 'fruit' column contains any of the fruits we are interested in
         #filter = [item_procurado in fruits_to_check for fruit in df['fruit']]
