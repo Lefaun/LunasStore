@@ -73,7 +73,7 @@ class ListarNome():
         st.write(df)
         Livros_a_Verificar = pd.read_csv('Lista_de_Livros - Folha1.csv')
         #filter =  [Search in Livros_a_Verificar for livro in df['Livros']]
-        filter = [item_procurado in ivros_a_Verificar for item_procurado in df['Livros']]
+        filter = [item_procurado in Livros_a_Verificar for item_procurado in df['Livros']]
             # Encontre a linha onde o item corresponde
            
             #linha_item = df[df['Livros'] == item_procurado]
