@@ -68,7 +68,7 @@ class ListarNome():
                 #st.write(row)
             
     def Consultar(self):
-        Item_procurado  = st.text_input("Consulte um Livro")
+        item_procurado  = st.text_input("Consulte um Livro")
         df = pd.read_csv('Lista_de_Livros - Folha1.csv')
         st.write(df)
         # Verifique se o item existe no DataFrame
@@ -87,7 +87,7 @@ class ListarNome():
             #print(f"Descrição: {descricao}")
             #print(f"Preço: {preco}")
             #print(f"Imagem: {imagem}")
-        if Item_procurado in filter:   
+        if item_procurado in filter:   
             st.write(f"este {item_procurado} encontra-se na Lista")
             st.write(df[filter])
         else:
