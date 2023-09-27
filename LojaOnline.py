@@ -32,7 +32,7 @@ class ListarNome():
             writer = csv.writer(file)
             writer.writerow(["Livro", "Revista", "Preço"])
             livro = writer.writerow(["", "", ""])
-            if writer st.success:
+            if st.success:
                 st.write("Livro adicionado com Sucesso")
             else:
                 st.write("Esse valor para Livro não é Válido")
