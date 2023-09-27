@@ -84,10 +84,10 @@ class ListarNome():
 
         if opcao == "1":
             livro  = st.text_input("Qual o Livro que pretende encomendar: ")
-            df.append(livro)
+            self.add_Nome(livro)
         elif opcao == "2":
             nome = st.text_input("Qual o Livro que pretende remover: ")
-            df.remove(livro)
+            self.tirar_Nome(livro)
         elif opcao == "3":
             self.Listar_Nome()
         elif opcao == "4":
