@@ -487,7 +487,7 @@ if choice == " Livros de Ciencia":
             Encomendas.append(REF34):
     with col3:
         st.header("A Natureza dos Bosques")
-        st.image("A_nossa_naturezabosques.jpg")
+        st.image("A_nossa_natureza_bosques.jpg")
         Button35 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, kay="selfcare")
         REF35 = str("A Natureza dos Bosques - 2€")
         if Button35 > 0:
