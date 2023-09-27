@@ -32,8 +32,8 @@ class ListarNome():
             writer = csv.writer(file)
             #livro = writer.writerow(["", "", ""])
             
-            df = pd.DataFrame(lst(self.Livros))
-            df2 = df.append(lst(self.Livros))
+            df = pd.DataFrame(file)
+            df2 = df.append(lst(livro))
             writer.writerows(livro)
             st.write(df2, width= 600)
             
