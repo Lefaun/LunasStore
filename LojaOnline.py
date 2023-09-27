@@ -52,7 +52,7 @@ class ListarNome():
         with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             reader = csv.reader(file)
             for row in reader:
-                print(row)
+                st.write(row)
             
     def Consultar(self):
         livro = st.text_input("Consulte um Livro")
