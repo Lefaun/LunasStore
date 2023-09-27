@@ -133,12 +133,6 @@ class ListarNome():
         
     def Menu_Completo(self):
         
-        st.write("Escolha uma opção:")
-        st.write("1. Adicionar à Lista")
-        st.write("2. Remover da Lista")
-        st.write("3. Consultar Lista")
-        st.write("4. Consultar um Livro")
-        st.write("5. Sair do Programa")
         Encomendas = ["1. Adicionar à Lista", "2. Remover da Lista", "3. Consultar Lista", "4. Consultar um Livro", "5. Sair do Programa" ]
         #opcao = st.text_input("Escolha uma opção - por favor:")
         opcao = st.selectbox("Selecione uma Opção", Encomendas)
