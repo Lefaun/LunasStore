@@ -69,16 +69,25 @@ class ListarNome():
             
     def Consultar(self):
         Search = st.text_input("Consulte um Livro")
-        #with open('Lista_de_Livros - Folha1.csv', 'r') as file:
-            #reader = csv.reader(file)
-            #df = pd.DataFrame(reader)
-            # create a sample DataFrame
-        df = pd.DataFrame({'Livros': ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3']})
+        with open('Lista_de_Livros - Folha1.csv', 'r') as file:
+            reader = csv.reader(file)
+            df = pd.DataFrame(reader)
+            if Search in data['Livros'].values:
+                linha_item = data[data[Livros]]==item_procurado]
+
+                descricao =  linha_item['Descricao'].values[0]
+                preco =  linha_item['preco'].values[0]
+                st.write(f" Item: {item_procurado}")
+        
+
+        
+        // não deu para criar um   create a sample DataFrame
+        #df = pd.DataFrame({'Livros': ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3']})
         # create a list of fruits we are interested in
-        Livros_a_Verificar = ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3','O Mundo de Patty', 'Filme de Natal']
+        #Livros_a_Verificar = ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3','O Mundo de Patty', 'Filme de Natal']
         
         # check if the 'fruit' column contains any of the fruits we are interested in
-        filter =  [Search in Livros_a_Verificar for livro in df['Livros']]
+        #filter =  [Search in Livros_a_Verificar for livro in df['Livros']]
         #livro in Livros_a_Verificar for 
         # print the resulting DataFrame, containing only the rows that match the mask
         
