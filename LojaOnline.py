@@ -73,7 +73,7 @@ class ListarNome():
             reader = csv.reader(file)
             #df = pd.DataFrame(reader)
             # create a sample DataFrame
-            df = pd.DataFrame(data=(reader),{'Livros': ["O Mundo de Patty", "Pipi das Meias Altas", "Filme de Natal"]})
+            df = pd.DataFrame({'Livros': ["O Mundo de Patty", "Pipi das Meias Altas", "Filme de Natal"]})
             
             # create a list of fruits we are interested in
             Livros_a_Verificar = ['O Mundo de Patty', 'Filme de Natal']
