@@ -71,24 +71,25 @@ class ListarNome():
         livro1 = st.text_input("Consulte um Livro")
         with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             reader = csv.reader(file)
-            #df = pd.DataFrame(reader)
+            df = pd.DataFrame(reader)
             # create a sample DataFrame
-            df = pd.DataFrame({'Livros': ["O Mundo de Patty", "Pipi das Meias Altas", "Filme de Natal"]})
-            
+            #df = pd.DataFrame({'Livros': ["O Mundo de Patty", "Pipi das Meias Altas", "Filme de Natal"]})
+            Livros_a_Verificar = pd.Dataframe(reader)
             # create a list of fruits we are interested in
-            Livros_a_Verificar = ['O Mundo de Patty', 'Filme de Natal']
+            #Livros_a_Verificar = ['O Mundo de Patty', 'Filme de Natal']
             
             # check if the 'fruit' column contains any of the fruits we are interested in
             filter = [livro1 in Livros_a_Verificar for livro in df['Livros']]
             
             # print the resulting DataFrame, containing only the rows that match the mask
-            st.write(df[filter])
+            
             #for row in reader:
-            for livro in filter:
-                if  livro in filter:
-                    st.write(f"este {livro1} encontra-se na Lista")
-                else:
-                    st.write(f"este {livro1} não encontra-se na Lista")
+            
+            if  livro in filter:
+                st.write(f"este {livro1} encontra-se na Lista")
+                st.write(df[filter])
+            else:
+                st.write(f"este {livro1} não encontra-se na Lista")
 
     def Menu_Completo(self):
         
