@@ -79,7 +79,7 @@ class ListarNome():
             #Livros_a_Verificar = ['O Mundo de Patty', 'Filme de Natal']
             
             # check if the 'fruit' column contains any of the fruits we are interested in
-            filter = [livro1 in reader for livro in df['Livros']]
+            filter = [livro1 in df for livro in df['Livros']]
             
             # print the resulting DataFrame, containing only the rows that match the mask
             
