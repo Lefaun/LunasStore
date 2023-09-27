@@ -146,8 +146,8 @@ class ListarNome():
         
         if opcao == "1. Adicionar à Lista":
             livro  = st.text_input("Qual o Livro que pretende encomendar: ")
-            preco  = st.text_input("Qual o Livro o Preço encomendar: ")
-            self.add_Nome(livro,preco)
+            preco  = st.text_input("Qual Preço do Livro a encomendar: ")
+            self.add_Nome(livro,preco,lista)
         elif opcao == "2. Remover da Lista":
             nome = st.text_input("Qual o Livro que pretende remover: ")
             self.tirar_Nome(livro)
