@@ -25,7 +25,7 @@ class ListarNome():
     def __init__(self):
         self.Livros = []
         self.Preco =[]
-        self.Lista ≈ []
+        self.Lista = []
 
     def add_Nome(self, livro):
         self.Lista.append(livro)
