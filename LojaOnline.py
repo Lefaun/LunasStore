@@ -49,12 +49,12 @@ class ListarNome():
             
             #st.write(df)
         
-            if st.success:
+        if st.success:
+        
+            st.write("Livro adicionado com Sucesso")
             
-                st.write("Livro adicionado com Sucesso")
-                
-            else:
-                st.write("Esse valor para Livro não é Válido")
+        else:
+            st.write("Esse valor para Livro não é Válido")
                     
            
             
