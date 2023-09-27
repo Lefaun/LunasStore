@@ -24,7 +24,6 @@ import pandas as pd
 class ListarNome():
     def __init__(self):
         self.Livros = []
-        self.Preco =[]
         self.Lista = []
 
     def add_Nome(self, livro, preco):
