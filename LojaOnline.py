@@ -37,7 +37,7 @@ class ListarNome():
             df = pd.DataFrame(data)
             #df2 = df.append(lst(livro))
             
-            st.write(df1, width= 600)
+            st.write(df, width= 600)
             
             if st.success:
                 st.write("Livro adicionado com Sucesso")
@@ -84,7 +84,7 @@ class ListarNome():
             self.add_Nome(livro)
         elif opcao == "2":
             nome = st.text_input("Qual o Livro que pretende remover: ")
-            self.tirar_Nome(livro)
+            self.tirar_Nome(livro,writer,data)
         elif opcao == "3":
             self.Listar_Nome()
         elif opcao == "4":
