@@ -24,21 +24,30 @@ import pandas as pd
 class ListarNome():
     def __init__(self):
         self.Livros = []
+        self.Preco =[]
+        self.Lista
 
     def add_Nome(self, livro):
+        self.Lista.append(livro)
+        self.Lista.append(preco)
+        Lista_de_Livros = self.Lista
+        df = pd.DataFrame(Lista_de_Livros)
+        
+        st.write(df)
         
         
-        with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
+        
+        #with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
            
-            writer = csv.writer(file, delimiter=',')
-            self.Livros = writer.writerow(livro) 
-            data = writer.writerows(livro)
+            #writer = csv.writer(file, delimiter=',')
+            #self.Livros = writer.writerow(livro) 
+            #data = writer.writerows(livro)
             
-            df = pd.DataFrame(Livros)
+            #df = pd.DataFrame(Livros)
             
             
             
-            st.write(df)
+            #st.write(df)
         
             if st.success:
             
@@ -63,14 +72,14 @@ class ListarNome():
         with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             reader = csv.reader(file)
             df = pd.DataFrame(reader)
-            st.write(df, width= 600)
+            st.write(df, width= 800)
             #for row in reader:
                 #st.write(row)
             
     def Consultar(self):
         item_procurado= st.text_input("Consulte um Livro")
         df = pd.read_csv('Lista_de_Livros - Folha1.csv')
-        st.write(df)
+        st.write(df, width= 800)
         #Livros_a_Verificar = pd.read_csv('Lista_de_Livros - Folha1.csv')
         #filter =  [Search in Livros_a_Verificar for livro in df['Livros']]
         # create a sample DataFrame
@@ -137,7 +146,8 @@ class ListarNome():
         
         if opcao == "1. Adicionar à Lista":
             livro  = st.text_input("Qual o Livro que pretende encomendar: ")
-            self.add_Nome(livro)
+            preco  = st.text_input("Qual o Livro o Preço encomendar: ")
+            self.add_Nome(livro,preco)
         elif opcao == "2. Remover da Lista":
             nome = st.text_input("Qual o Livro que pretende remover: ")
             self.tirar_Nome(livro)
