@@ -25,27 +25,27 @@ class ListarNome():
     def __init__(self):
         self.Livros = []
 
-    #def add_Nome(self, livro):
+    def add_Nome(self, livro):
         
         
-        #with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
+        with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
            
-            #writer = csv.writer(file, delimiter=',')
-            #Livros = writer.writerow(livro) 
-            #data = writer.writerows(livro)
+            writer = csv.writer(file, delimiter=',')
+            Livros = writer.writerow(livro) 
+            data = writer.writerows(livro)
             
-            #df = pd.DataFrame(Livros)
+            df = pd.DataFrame(Livros)
             
             
             
-        #st.write(df)
+            st.write(df)
         
-            #if st.success:
+            if st.success:
             
-                #st.write("Livro adicionado com Sucesso")
+                st.write("Livro adicionado com Sucesso")
                 
-            #else:
-                #st.write("Esse valor para Livro não é Válido")
+            else:
+                st.write("Esse valor para Livro não é Válido")
                     
            
             
@@ -80,8 +80,6 @@ class ListarNome():
         df = pd.DataFrame({'Livros': ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3']})
         Livros_a_Verificar = ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3','O Mundo de Patty', 'Filme de Natal']
         
-        # check if the 'fruit' column contains any of the fruits we are interested in
-        #filter = [item_procurado in fruits_to_check for fruit in df['fruit']]
         
         # print the resulting DataFrame, containing only the rows that match the mask
         filter = [item_procurado in Livros_a_Verificar for items in df['Livros']]
