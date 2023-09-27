@@ -72,7 +72,7 @@ class ListarNome():
         with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             reader = csv.reader(file)
             df = pd.DataFrame(reader)
-            Search = df['Livros'].isin(livro)
+            Search = df['0'].isin(livro)
             #for row in reader:
             if  livro in Search:
                 st.write(f"este {livro} encontra-se na Lista")
