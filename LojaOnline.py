@@ -78,7 +78,7 @@ class ListarNome():
         Livros_a_Verificar = ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3','O Mundo de Patty', 'Filme de Natal']
         
         # check if the 'fruit' column contains any of the fruits we are interested in
-        filter =  [ for livro in df['Livros']]
+        filter =  [livro in df['Livros']]
         #livro in Livros_a_Verificar for 
         # print the resulting DataFrame, containing only the rows that match the mask
         
