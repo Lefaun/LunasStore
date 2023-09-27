@@ -87,7 +87,7 @@ class ListarNome():
             #print(f"Descrição: {descricao}")
             #print(f"Preço: {preco}")
             #print(f"Imagem: {imagem}")
-            
+        if Item_procurado in filter:   
             st.write(f"este {item_procurado} encontra-se na Lista")
             st.write(df[filter])
         else:
