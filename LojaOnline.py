@@ -69,26 +69,26 @@ class ListarNome():
             
     def Consultar(self):
         livro = st.text_input("Consulte um Livro")
-        with open('Lista_de_Livros - Folha1.csv', 'r') as file:
-            reader = csv.reader(file)
+        #with open('Lista_de_Livros - Folha1.csv', 'r') as file:
+            #reader = csv.reader(file)
             #df = pd.DataFrame(reader)
             # create a sample DataFrame
-            df = pd.DataFrame({'Livros': ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3']})
-            # create a list of fruits we are interested in
-            Livros_a_Verificar = ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3','O Mundo de Patty', 'Filme de Natal']
+        df = pd.DataFrame({'Livros': ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3']})
+        # create a list of fruits we are interested in
+        Livros_a_Verificar = ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3','O Mundo de Patty', 'Filme de Natal']
+        
+        # check if the 'fruit' column contains any of the fruits we are interested in
+        filter = for livro in df['Livros']]
+        #livro in Livros_a_Verificar for 
+        # print the resulting DataFrame, containing only the rows that match the mask
+        
+        #for row in reader:
+        st.write(df[filter])
+        if livro in filter:
+            st.write(f"este {livro} encontra-se na Lista")
             
-            # check if the 'fruit' column contains any of the fruits we are interested in
-            filter = [livro in Livros_a_Verificar for livro in df['Livros']]
-            
-            # print the resulting DataFrame, containing only the rows that match the mask
-            
-            #for row in reader:
-            st.write(df[filter])
-            if livro in filter:
-                st.write(f"este {livro} encontra-se na Lista")
-                
-            else:
-                st.write(f"este {livro} não encontra-se na Lista")
+        else:
+            st.write(f"este {livro} não encontra-se na Lista")
 
     def Menu_Completo(self):
         
