@@ -29,13 +29,13 @@ class ListarNome():
         
         
         with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
-            
+           
             writer = csv.writer(file, delimiter=',')
-            
+            livro = writer.writerow(lst(livro)) 
             #data = writer.writerows(livro)
             
             df = pd.DataFrame(writer)
-            livro = writer.writerow(livro)
+            
             #df2 = df.append(lst(livro))
             
             st.write(df, width= 600)
@@ -44,7 +44,7 @@ class ListarNome():
                 st.write("Livro adicionado com Sucesso")
             else:
                 st.write("Esse valor para Livro não é Válido")
-            
+                        
 
     def tirar_Nome(self, livro):
         if livro in self.Livros:
