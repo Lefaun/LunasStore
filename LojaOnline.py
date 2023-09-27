@@ -72,8 +72,8 @@ class ListarNome():
         with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             reader = csv.reader(file)
             data = pd.DataFrame(reader)
-            if Search in data['Livros'].values:
-                linha_item = data[data['Livros']==Search]
+            if Search in reader['Livros'].values:
+                linha_item = reader[reader['Livros']==Search]
 
                 descricao =  linha_item['Descricao'].values[0]
                 preco =  linha_item['preco'].values[0]
