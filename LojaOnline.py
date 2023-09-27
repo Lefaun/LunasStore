@@ -69,15 +69,21 @@ class ListarNome():
             
     def Consultar(self):
         Search = st.text_input("Consulte um Livro")
-        with open('Lista_de_Livros - Folha1.csv', 'r') as file:
-            reader = csv.reader(file)
-            data = pd.DataFrame(reader)
-            if Search in reader['Livros'].values:
-                linha_item = reader[reader['Livros']==Search]
+        df = pd.read_csv('Lista_de_Livros - Folha1.csv')
 
-                descricao =  linha_item['Descricao'].values[0]
-                preco =  linha_item['preco'].values[0]
-                st.write(f" Item: {item_procurado}")
+        for index, row in df.iterrows():
+            item = row['Livros']
+            if Search == data['Livros']:
+                st.write(f"Existe o {item} ")
+        #with open('Lista_de_Livros - Folha1.csv', 'r') as file:
+            #reader = csv.reader(file)
+            #df = pd.DataFrame(reader)
+            #if Search in reader['Livros'].values:
+                #linha_item = reader[reader['Livros']==Search]
+
+                #descricao =  linha_item['Descricao'].values[0]
+                #preco =  linha_item['preco'].values[0]
+                #st.write(f" Item: {item_procurado}")
         
 
         
