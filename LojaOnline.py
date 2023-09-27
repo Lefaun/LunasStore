@@ -86,9 +86,9 @@ class ListarNome():
             #for row in reader:
             for livro in filter:
                 if  livro in filter:
-                    st.write(f"este {livro} encontra-se na Lista")
+                    st.write(f"este {livro1} encontra-se na Lista")
                 else:
-                    st.write(f"este {livro} não encontra-se na Lista")
+                    st.write(f"este {livro1} não encontra-se na Lista")
 
     def Menu_Completo(self):
         
