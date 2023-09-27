@@ -38,7 +38,7 @@ class ListarNome():
             df1= df.append(lst(Livros)
             
             #df2 = df.append(lst(livro))
-        st.write(df, width= 600)
+        st.write(df)
         
         if st.success:
         
