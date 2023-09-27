@@ -39,8 +39,10 @@ class ListarNome():
         st.write("Os nomes que constam da lista são:")
         #for livro in self.Livros:
         
-        file = open('Lista_de_Livros - Folha1.csv')
-            st.write(file)
+        with open('Lista_de_Livros - Folha1.csv', 'r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                print(row)
             
     def Consultar(self):
         livro = st.text_input("Consulte um Livro")
@@ -48,6 +50,7 @@ class ListarNome():
             st.write(f"este {livro} encontra-se na Lista")
         else:
             st.write(f"este {livro} não encontra-se na Lista")
+    
     def Menu_Completo(self):
         
         st.write("Escolha uma opção:")
@@ -73,61 +76,6 @@ class ListarNome():
             
 
         df = pd.DataFrame(self.Livros)
-
-
-    data = []
-
-    def transform_row(row):
-        Livro = line[0]
-        Revista = int(line[1])
-        Preo = line[2]
-    
-        return [
-    
-            # column 1
-            Livro,
-    
-            # column 2: subtract 1000 from the year
-            release_date - 1000,
-    
-            # column 4: empty column
-            Revista,
-    
-            # column 3
-            Preco
-        ]
-        
-        # read csv file line by line
-        with open('Lista_de_Livros - Folha1.csv', 'rb') as f:
-            reader = csv.reader(f)
-        
-            # pop header row (1st row in csv)
-            header = reader.next()
-        
-            # loop through each line in csv and transform
-            for line in reader:
-        
-                # if the line is blank, skip this and keep going
-                if not line: continue
-        
-                data.append(transform_row(line))
-         # write a new csv file
-        with open('Lista_de_Livros - Folha1.csv', 'w') as f:
-            # define new csv writer
-            writer = csv.writer(f, delimiter=',')
-        
-            # write a header row to our output.csv file
-            writer.writerow([
-                'Livro',
-                'Revista',
-                None,
-                'Preço'
-            ])
-        
-            # write our data to the file
-            writer.writerows(data)
-            st.write(reader)
-        
         
 
 
