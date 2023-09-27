@@ -25,16 +25,16 @@ class ListarNome():
     def __init__(self):
         self.Livros = []
 
-    def add_Nome(self, livro):
+    #def add_Nome(self, livro):
         
         
-        with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
+        #with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
            
-            writer = csv.writer(file, delimiter=',')
-            Livros = writer.writerow(livro) 
+            #writer = csv.writer(file, delimiter=',')
+            #Livros = writer.writerow(livro) 
             #data = writer.writerows(livro)
             
-            df = pd.DataFrame(Livros)
+            #df = pd.DataFrame(Livros)
             
             
             
