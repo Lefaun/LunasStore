@@ -139,19 +139,21 @@ class ListarNome():
         st.write("3. Consultar Lista")
         st.write("4. Consultar um Livro")
         st.write("5. Sair do Programa")
-        opcao = st.text_input("Escolha uma opção - por favor:")
-
-        if opcao == "1":
+        Encomendas = ["1. Adicionar à Lista", "2. Remover da Lista", "3. Consultar Lista", "4. Consultar um Livro", "5. Sair do Programa": ]
+        #opcao = st.text_input("Escolha uma opção - por favor:")
+        opcao = st.selectbox("Selecione uma Opção", Encomendas)
+        
+        if opcao == "1. Adicionar à Lista":
             livro  = st.text_input("Qual o Livro que pretende encomendar: ")
             self.add_Nome(livro)
-        elif opcao == "2":
+        elif opcao == "2. Remover da Lista":
             nome = st.text_input("Qual o Livro que pretende remover: ")
             self.tirar_Nome(livro)
-        elif opcao == "3":
+        elif opcao == "3. Consultar Lista":
             self.Listar_Nome()
-        elif opcao == "4":
+        elif opcao == "4. Consultar um Livro":
             self.Consultar()
-        elif opcao == "5":
+        elif opcao == "5. Sair do Programa":
             st.write("Sair")
             
 
