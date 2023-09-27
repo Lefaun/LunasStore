@@ -85,7 +85,7 @@ class ListarNome():
         
         #for row in reader:
         st.write(df[filter])
-        if livro1 in filter:
+        if livro in filter:
             st.write(f"este {livro} encontra-se na Lista")
             
         else:
