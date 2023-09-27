@@ -38,10 +38,10 @@ class ListarNome():
             df1= df.append(lst(Livros)
             
             #df2 = df.append(lst(livro))
-            
+            st.write(df, width= 600)
             if st.success:
                 st.write("Livro adicionado com Sucesso")
-                st.write(df, width= 600)
+                
             else:
                 st.write("Esse valor para Livro não é Válido")
                         
