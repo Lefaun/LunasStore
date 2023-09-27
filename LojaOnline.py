@@ -34,9 +34,9 @@ class ListarNome():
             writer = csv.writer(file, delimiter=',')
             Lista_de_Livros = writer.writerow(self.Lista)
             df = pd.DataFrame(self.Lista)
-            Lista_Final = df.to_csv(Lista_de_Livros, index=False, sep=';')
+            Lista_de_Livros = df.to_csv(Lista_de_Livros, index=False, sep=';')
 
-            st.write(Lista_Final)
+            st.write(Lista_de_Livros)
 
         
         
