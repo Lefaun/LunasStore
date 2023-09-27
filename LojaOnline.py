@@ -65,11 +65,13 @@ class ListarNome():
             
     def Consultar(self):
         livro = st.text_input("Consulte um Livro")
-        for row in reader:
-            if  livro in reader:
-                st.write(f"este {livro} encontra-se na Lista")
-            else:
-                st.write(f"este {livro} não encontra-se na Lista")
+          with open('Lista_de_Livros - Folha1.csv', 'r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                if  livro in reader:
+                    st.write(f"este {livro} encontra-se na Lista")
+                else:
+                    st.write(f"este {livro} não encontra-se na Lista")
     def Menu_Completo(self):
         
         st.write("Escolha uma opção:")
