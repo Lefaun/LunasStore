@@ -462,7 +462,12 @@ if choice == " Livros de Ciencia":
         if Button31 >0:
             Encomendas.append(REF31)
     with col3:
-        st.header("Coleção de Livros")
+        st.header("A Inteligência Anima")
+        st.image("A_inteligencia_animal.jpeg")
+        Button31 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="cora32")
+        REF32 = str("A Inteligência Animal 2€")
+        if Button31 >0:
+            Encomendas.append(REF32)
         
     
     st.header(Encomendas)
