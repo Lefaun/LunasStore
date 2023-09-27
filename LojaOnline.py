@@ -191,7 +191,7 @@ choice = st.selectbox("Selecione uma Opção", Menu)
 Encomendas = []
 Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
 button = st.sidebar.button("Pesquise Por TItulo", )
-if button == True:
+if button:
     button.Consultar()
 
 def send_mail(email, subject, message):
