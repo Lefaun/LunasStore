@@ -35,7 +35,7 @@ class ListarNome():
             #data = writer.writerows(livro)
             
             df = pd.DataFrame(writer)
-            df1= df.append(lst(Livros)
+            df1= df.append(Livros)
             
             
         #st.write(df)
