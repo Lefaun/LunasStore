@@ -71,6 +71,7 @@ class ListarNome():
         livro = st.text_input("Consulte um Livro")
         with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             reader = csv.reader(file)
+            df = pd.DataFrame(reader)
             Search = df['Livros'].isin(livro)
             #for row in reader:
             if  livro in Search:
