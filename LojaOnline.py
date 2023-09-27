@@ -47,7 +47,7 @@ class ListarNome():
             else:
                 st.write("Esse valor para Livro não é Válido")
                     
-            df2 = df.append(lst(livro))
+           
             
     def tirar_Nome(self, livro):
         if livro in self.Livros:
