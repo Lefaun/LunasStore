@@ -92,7 +92,7 @@ class ListarNome():
             st.write(f"este {item_procurado} encontra-se na Lista")
             st.write(df[filter])
         else:
-            st.write(f"este {item_procurado}} não encontra-se na Lista")
+            st.write(f"este {item_procurado} não encontra-se na Lista")
             st.write(df[filter])
         else:
             print(f"Item '{item_procurado}' não encontrado no DataFrame.")
