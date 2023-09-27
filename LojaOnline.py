@@ -484,7 +484,7 @@ if choice == " Livros de Ciencia":
         Button34 = st.number_input(" Quantidade e adicione ao Carrinho", min_value=0, key="4horas")
         REF34 = str("A vida secreta dos Animais - 2€")
         if Button34 > 0:
-            Encomendas.append(REF34):
+            Encomendas.append(REF34)
     with col3:
         st.header("A Natureza dos Bosques")
         st.image("A_nossa_natureza_bosques.jpg")
