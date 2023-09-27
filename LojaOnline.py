@@ -73,7 +73,7 @@ class ListarNome():
 
         for index, row in df.iterrows():
             item = row['Livros']
-            if Search == data['Livros']:
+            if Search == df['Livros']:
                 st.write(f"Existe o {item} ")
         #with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             #reader = csv.reader(file)
