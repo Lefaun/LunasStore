@@ -192,7 +192,7 @@ Encomendas = []
 Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
 button = st.sidebar.button("Pesquise Por TItulo", )
 if button == True:
-    button.Menu_Completo()
+    button.Consultar()
 
 def send_mail(email, subject, message):
     try:
