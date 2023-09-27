@@ -164,7 +164,7 @@ class ListarNome():
             st.write("Sair")
             
 
-        df = pd.DataFrame(self.Livros)
+        #df = pd.DataFrame(self.Livros)
         
         
 
