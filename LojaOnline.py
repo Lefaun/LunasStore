@@ -70,25 +70,21 @@ class ListarNome():
     def Consultar(self):
         Item_procurado  = st.text_input("Consulte um Livro")
         data = pd.read_csv('Lista_de_Livros - Folha1.csv')
-
-        
-
-
         # Verifique se o item existe no DataFrame
-        if item_procurado in data['Item'].values:
+        if item_procurado in data['Livros'].values:
             # Encontre a linha onde o item corresponde
-            linha_item = data[data['Item'] == item_procurado]
+            linha_item = data[data['Livros'] == item_procurado]
         
             # Extraia a descrição, preço e imagem correspondentes
             descricao = linha_item['Descrição'].values[0]
             preco = linha_item['Preço'].values[0]
-            imagem = linha_item['Imagem'].values[0]
+            #imagem = linha_item['Imagem'].values[0]
         
             # Exiba os resultados
             print(f"Item: {item_procurado}")
             print(f"Descrição: {descricao}")
             print(f"Preço: {preco}")
-            print(f"Imagem: {imagem}")
+            #print(f"Imagem: {imagem}")
         else:
             print(f"Item '{item_procurado}' não encontrado no DataFrame.")
         #with open('Lista_de_Livros - Folha1.csv', 'r') as file:
