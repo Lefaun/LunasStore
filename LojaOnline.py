@@ -30,13 +30,13 @@ class ListarNome():
         self.Lista.append(livro)
         self.Lista.append(preco)
         Lista_de_Livros = self.Lista
-        with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
-            writer = csv.writer(file, delimiter=',')
-            Lista_de_Livros = writer.writerow(self.Lista)
-            df = pd.DataFrame(self.Lista)
-            Lista_de_Livros = df.to_csv(Lista_de_Livros, index=False, sep=';')
+        #with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
+            #writer = csv.writer(file, delimiter=',')
+            #Lista_de_Livros = writer.writerow(self.Lista)
+            #df = pd.DataFrame(self.Lista)
+        Lista_de_Livros = df.to_csv(self.Lista, index=False, sep=';')
 
-            st.write(Lista_de_Livros)
+        st.write(Lista_de_Livros)
 
         
         
