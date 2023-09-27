@@ -68,27 +68,27 @@ class ListarNome():
                 #st.write(row)
             
     def Consultar(self):
-        livro1 = st.text_input("Consulte um Livro")
+        livro = st.text_input("Consulte um Livro")
         with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             reader = csv.reader(file)
-            df = pd.DataFrame(reader)
+            #df = pd.DataFrame(reader)
             # create a sample DataFrame
-        
+            df = pd.DataFrame({'Livros': ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3']})
             # create a list of fruits we are interested in
-            Livros_a_Verificar = ['O Mundo de Patty', 'Filme de Natal']
+            Livros_a_Verificar = ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3','O Mundo de Patty', 'Filme de Natal']
             
             # check if the 'fruit' column contains any of the fruits we are interested in
-            filter = [livro1 in Livros_a_Verificar for livros in df['Livros']]
+            filter = [livro in Livros_a_Verificar for livro in df['Livros']]
             
             # print the resulting DataFrame, containing only the rows that match the mask
             
             #for row in reader:
             st.write(df[filter])
-            if livro1 in filter:
-                st.write(f"este {livro1} encontra-se na Lista")
+            if livro in filter:
+                st.write(f"este {livro} encontra-se na Lista")
                 
             else:
-                st.write(f"este {livro1} não encontra-se na Lista")
+                st.write(f"este {livro} não encontra-se na Lista")
 
     def Menu_Completo(self):
         
