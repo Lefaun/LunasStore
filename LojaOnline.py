@@ -72,20 +72,27 @@ class ListarNome():
         df = pd.read_csv('Lista_de_Livros - Folha1.csv')
         st.write(df)
         # Verifique se o item existe no DataFrame
-        if item_procurado in df['Livros'].values:
+        filter = [for item_procurado in df if item_procurado in df['Livros']:
             # Encontre a linha onde o item corresponde
-            linha_item = df[df['Livros'] == item_procurado]
+           
+            #linha_item = df[df['Livros'] == item_procurado]
         
             # Extraia a descrição, preço e imagem correspondentes
-            descricao = linha_item['Descrição'].values[0]
-            preco = linha_item['Preço'].values[0]
+            #descricao = linha_item['Descrição'].values[0]
+            #preco = linha_item['Preço'].values[0]
             #imagem = linha_item['Imagem'].values[0]
         
             # Exiba os resultados
-            print(f"Item: {item_procurado}")
-            print(f"Descrição: {descricao}")
-            print(f"Preço: {preco}")
+            #print(f"Item: {item_procurado}")
+            #print(f"Descrição: {descricao}")
+            #print(f"Preço: {preco}")
             #print(f"Imagem: {imagem}")
+            
+            st.write(f"este {item_procurado} encontra-se na Lista")
+            st.write(df[filter])
+        else:
+            st.write(f"este {item_procurado}} não encontra-se na Lista")
+            st.write(df[filter])
         else:
             print(f"Item '{item_procurado}' não encontrado no DataFrame.")
         #with open('Lista_de_Livros - Folha1.csv', 'r') as file:
