@@ -84,7 +84,7 @@ class ListarNome():
             # print the resulting DataFrame, containing only the rows that match the mask
             st.write(df[filter])
             #for row in reader:
-            for livro in range(filter):
+            for livro in filter:
                 if  livro in filter:
                     st.write(f"este {livro} encontra-se na Lista")
                 else:
