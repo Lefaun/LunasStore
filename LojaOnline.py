@@ -68,10 +68,10 @@ class ListarNome():
                 #st.write(row)
             
     def Consultar(self):
-        tem_procurado  = st.text_input("Consulte um Livro")
+        Item_procurado  = st.text_input("Consulte um Livro")
         data = pd.read_csv('Lista_de_Livros - Folha1.csv')
 
-        Item a ser pesquisado
+        
 
 
         # Verifique se o item existe no DataFrame
