@@ -68,11 +68,11 @@ class ListarNome():
                 #st.write(row)
             
     def Consultar(self):
-        livro = st.text_input("Consulte um Livro")
+        livro1 = st.text_input("Consulte um Livro")
         with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             reader = csv.reader(file)
             df = pd.DataFrame(reader)
-            Search = [livro in Livros for livro in df['Livros']]
+            Search = [livro in livro1 for livros in df['Livros']]
             #for row in reader:
             if  livro in Search:
                 st.write(f"este {livro} encontra-se na Lista")
