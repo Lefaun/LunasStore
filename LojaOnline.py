@@ -30,8 +30,8 @@ class ListarNome():
         
         with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(["Livro", "Revista", "Preço"])
-            livro = writer.writerow(["", "", ""])
+            #writer.writerow(["Livro", "Revista", "Preço"])
+            #livro = writer.writerow(["", "", ""])
             df = pd.DataFrame(livro)
             df2 = df.append(livro)
             st.write(df)
