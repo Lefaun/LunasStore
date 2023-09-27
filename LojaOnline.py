@@ -31,10 +31,11 @@ class ListarNome():
         with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
             
             writer = csv.writer(file, delimiter=',')
-            livro = writer.writerow(livro)
+            
             #data = writer.writerows(livro)
             
             df = pd.DataFrame(writer)
+            livro = writer.writerow(livro)
             #df2 = df.append(lst(livro))
             
             st.write(df, width= 600)
