@@ -131,12 +131,6 @@ class ListarNome():
         
         #for row in reader:
         
-        if Search in filter:
-            st.write(f"este {Search} encontra-se na Lista")
-            st.write(df[Livros_a_Verificar])
-        else:
-            st.write(f"este {Search} não encontra-se na Lista")
-            st.write(df[Livros_a_Verificar])
     def Menu_Completo(self):
         
         st.write("Escolha uma opção:")
