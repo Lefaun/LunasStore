@@ -190,7 +190,7 @@ components.html(
 choice = st.selectbox("Selecione uma Opção", Menu)
 Encomendas = []
 Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
-button = st.sidebar.button("Pesquise Por TItulo", on_click=Encomendar )
+button = st.sidebar.button("Pesquise Por TItulo")
 
 
 def send_mail(email, subject, message):
