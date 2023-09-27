@@ -72,7 +72,7 @@ class ListarNome():
         df = pd.read_csv('Lista_de_Livros - Folha1.csv')
         st.write(df)
         # Verifique se o item existe no DataFrame
-        filter = [ item_procurado in df if item_procurado in df['Livros']:
+        filter = [ item_procurado in df if item_procurado in df['Livros']
             # Encontre a linha onde o item corresponde
            
             #linha_item = df[df['Livros'] == item_procurado]
