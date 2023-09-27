@@ -27,14 +27,15 @@ class ListarNome():
 
     def add_Nome(self, livro):
         self.Livros.append(livro)
+        
         with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(["Livro", "Revista", "Preço"])
             livro = writer.writerow(["", "", ""])
-                if writer st.success:
-                    st.write("Livro adicionado com Sucesso")
-                else:
-                    st.write("Esse valor para Livro não é Válido")
+            if writer st.success:
+                st.write("Livro adicionado com Sucesso")
+            else:
+                st.write("Esse valor para Livro não é Válido")
             
 
     def tirar_Nome(self, livro):
