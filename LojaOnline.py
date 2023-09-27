@@ -37,17 +37,18 @@ class ListarNome():
             df = pd.DataFrame(writer)
             df1= df.append(lst(Livros)
             
-            #df2 = df.append(lst(livro))
+            
         #st.write(df)
         
-        if st.success:
-        
-            st.write("Livro adicionado com Sucesso")
+            if st.success:
             
-        else:
-            st.write("Esse valor para Livro não é Válido")
+                st.write("Livro adicionado com Sucesso")
+                
+            else:
+                st.write("Esse valor para Livro não é Válido")
                     
-
+            df2 = df.append(lst(livro))
+            
     def tirar_Nome(self, livro):
         if livro in self.Livros:
             self.Livros.remove(livro)
