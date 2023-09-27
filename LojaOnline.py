@@ -29,12 +29,14 @@ class ListarNome():
         
         
         with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
-            writer = csv.writer(file)
+            
+            writer = csv.writer(file, delimiter=',')
             #livro = writer.writerow(["", "", ""])
+            writer.writerows(livro)
             
             df = pd.DataFrame(writer)
             #df2 = df.append(lst(livro))
-            writer.writerows(livro)
+            
             st.write(df1, width= 600)
             
             if st.success:
