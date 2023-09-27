@@ -33,7 +33,7 @@ class ListarNome():
             #livro = writer.writerow(["", "", ""])
             
             df = pd.DataFrame(writer)
-            df2 = df.append(lst(livro))
+            #df2 = df.append(lst(livro))
             writer.writerows(livro)
             st.write(df1, width= 600)
             
