@@ -35,7 +35,7 @@ class ListarNome():
             df = pd.DataFrame(writer)
             df2 = df.append(lst(livro))
             writer.writerows(livro)
-            st.write(df2, width= 600)
+            st.write(df1, width= 600)
             
             if st.success:
                 st.write("Livro adicionado com Sucesso")
