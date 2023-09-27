@@ -84,7 +84,7 @@ class ListarNome():
         #filter = [item_procurado in fruits_to_check for fruit in df['fruit']]
         
         # print the resulting DataFrame, containing only the rows that match the mask
-        filter = [item_procurado in Livros_a_Verificar for item_procurado in df['Livros']]
+        filter = [item_procurado in Livros_a_Verificar for items in df['Livros']]
             # Encontre a linha onde o item corresponde
            
             #linha_item = df[df['Livros'] == item_procurado]
