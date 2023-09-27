@@ -71,9 +71,9 @@ class ListarNome():
         item_procurado  = st.text_input("Consulte um Livro")
         df = pd.read_csv('Lista_de_Livros - Folha1.csv')
         st.write(df)
-        # Verifique se o item existe no DataFrame
+        Livros_a_Verificar = pd.read_csv('Lista_de_Livros - Folha1.csv')
         #filter =  [Search in Livros_a_Verificar for livro in df['Livros']]
-        filter = [ item_procurado in df for item_procurado in df['Livros']]
+        filter = [item_procurado in ivros_a_Verificar for item_procurado in df['Livros']]
             # Encontre a linha onde o item corresponde
            
             #linha_item = df[df['Livros'] == item_procurado]
@@ -88,6 +88,7 @@ class ListarNome():
             #print(f"Descrição: {descricao}")
             #print(f"Preço: {preco}")
             #print(f"Imagem: {imagem}")
+        
         if item_procurado in filter:   
             st.write(f"este {item_procurado} encontra-se na Lista")
             st.write(df[filter])
