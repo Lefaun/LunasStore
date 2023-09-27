@@ -26,7 +26,7 @@ class ListarNome():
         self.Livros = []
 
     def add_Nome(self, livro):
-        self.Livros = df.append(livro)
+        ad1 = df.append(livro)
         
         with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
             writer = csv.writer(file)
