@@ -39,7 +39,9 @@ class ListarNome():
             
             #df2 = df.append(lst(livro))
             st.write(df, width= 600)
+            
             if st.success:
+            
                 st.write("Livro adicionado com Sucesso")
                 
             else:
