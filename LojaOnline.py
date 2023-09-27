@@ -65,7 +65,7 @@ class ListarNome():
             
     def Consultar(self):
         livro = st.text_input("Consulte um Livro")
-        if livro in self.Livros:
+        if livro in df:
             st.write(f"este {livro} encontra-se na Lista")
         else:
             st.write(f"este {livro} não encontra-se na Lista")
