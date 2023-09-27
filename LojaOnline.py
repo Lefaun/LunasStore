@@ -94,8 +94,7 @@ class ListarNome():
         else:
             st.write(f"este {item_procurado} não encontra-se na Lista")
             st.write(df[filter])
-        else:
-            print(f"Item '{item_procurado}' não encontrado no DataFrame.")
+       
         #with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             #reader = csv.reader(file)
             #df = pd.DataFrame(reader)
