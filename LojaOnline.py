@@ -27,7 +27,7 @@ class ListarNome():
         self.Preco =[]
         self.Lista = []
 
-    def add_Nome(self, livro):
+    def add_Nome(self, livro, preco):
         self.Lista.append(livro)
         self.Lista.append(preco)
         Lista_de_Livros = self.Lista
@@ -147,7 +147,7 @@ class ListarNome():
         if opcao == "1. Adicionar à Lista":
             livro  = st.text_input("Qual o Livro que pretende encomendar: ")
             preco  = st.text_input("Qual Preço do Livro a encomendar: ")
-            self.add_Nome(livro,preco)
+            self.add_Nome(self,livro,preco)
         elif opcao == "2. Remover da Lista":
             nome = st.text_input("Qual o Livro que pretende remover: ")
             self.tirar_Nome(livro)
