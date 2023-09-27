@@ -73,11 +73,11 @@ class ListarNome():
             reader = csv.reader(file)
             Search = df['Livro'].isin(livro)
             #for row in reader:
-                if  livro in Search:
-                    st.write(f"este {livro} encontra-se na Lista")
-                else:
-                    st.write(f"este {livro} não encontra-se na Lista")
-   
+            if  livro in Search:
+                st.write(f"este {livro} encontra-se na Lista")
+            else:
+                st.write(f"este {livro} não encontra-se na Lista")
+
     def Menu_Completo(self):
         
         st.write("Escolha uma opção:")
