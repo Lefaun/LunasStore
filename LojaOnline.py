@@ -51,7 +51,8 @@ class ListarNome():
         
         with open('Lista_de_Livros - Folha1.csv', 'r') as file:
             reader = csv.reader(file)
-            st.write(reader)
+            df = pd.DataFrame(self.Livros + reader)
+            st.write(df)
             #for row in reader:
                 #st.write(row)
             
