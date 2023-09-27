@@ -81,7 +81,7 @@ class ListarNome():
         
 
         
-        // não deu para criar um   create a sample DataFrame
+        #não deu para criar um   create a sample DataFrame
         #df = pd.DataFrame({'Livros': ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3']})
         # create a list of fruits we are interested in
         #Livros_a_Verificar = ['Coleção DVD1', 'A Lassie', 'Filmes de Natal', 'Floribella RI-Fixe', 'Mundo de Patty 1', 'Mundo de Patty ', 'Mundo de Patty 3','O Mundo de Patty', 'Filme de Natal']
