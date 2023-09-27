@@ -65,7 +65,7 @@ class ListarNome():
             
     def Consultar(self):
         livro = st.text_input("Consulte um Livro")
-        for row in read:
+        for row in reader:
             if  livro in reader:
                 st.write(f"este {livro} encontra-se na Lista")
             else:
