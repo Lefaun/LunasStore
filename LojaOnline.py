@@ -26,12 +26,15 @@ class ListarNome():
         self.Livros = []
 
     def add_Nome(self, livro):
-        self.Livros.append(livro)
+        df.append(livro)
         
         with open('Lista_de_Livros - Folha1.csv', 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(["Livro", "Revista", "Preço"])
             livro = writer.writerow(["", "", ""])
+            df = pd.DataFrame(livro)
+            st.write(df)
+            
             if st.success:
                 st.write("Livro adicionado com Sucesso")
             else:
