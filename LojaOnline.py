@@ -40,12 +40,12 @@ class ListarNome():
             #df2 = df.append(lst(livro))
             st.write(df, width= 600)
             
-            if st.success:
+            #if st.success:
             
-                st.write("Livro adicionado com Sucesso")
+                #st.write("Livro adicionado com Sucesso")
                 
-            else:
-                st.write("Esse valor para Livro não é Válido")
+            #else:
+                #st.write("Esse valor para Livro não é Válido")
                         
 
     def tirar_Nome(self, livro):
