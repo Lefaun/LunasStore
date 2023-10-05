@@ -603,7 +603,7 @@ if choice == "Livros Académicos":
             Encomendas.append(REF42)
     with col2:
          with col1:
-        st.header(Encomendas)
+         st.header(Encomendas)
     with col2:
         Confirmar = st.button("Confirmar")
         
