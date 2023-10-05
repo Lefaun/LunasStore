@@ -420,7 +420,7 @@ if choice == " Filmes de Natal":
             st.subheader('  Mensagem enviada com Sucesso!') 
             st.write(Encomendas)
     
-if choice == " Livros de Ciencia":
+if choice == "Livros de Ciência":
     col1, col2, col3 = st.columns(3)
         
     with col1:
