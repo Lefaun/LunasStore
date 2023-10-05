@@ -532,7 +532,7 @@ if choice == "Livros de Aventura":
         REF36 = str("Livro de Experiências - 3€")
         if Button36 > 0:
             Encomendas.append(REF36)
-     with col2:
+    with col2:
         st.header("Livro de Magia")
         st.image("livro_magia.jpg")
         Button37 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="imortal")
