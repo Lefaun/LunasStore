@@ -173,7 +173,7 @@ class ListarNome():
 st.title(" A Loja online da Luna -  Livraria e DVDs e Séries")
 st.write("adiciona ao teu carrinho ou segue pela opção Encomendar no menu lateral ou nas opções da página")
 
-Menu=("Encomendar","Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", " Livros de Aventura", " Livros de Ciencia", )
+Menu=("Encomendar","Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", " Livros de Aventura", " Livros de Ciência", "Livros Académicos")
 components.html(
     """<!-- Hotjar Tracking Code for https://lunastore.streamlit.app/ -->
 <script>
@@ -522,6 +522,102 @@ if choice == " Livros de Ciencia":
     #    mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
     #    send_mail(email, subject, message)
     #    st.subheader('  Mensagem enviada com Sucesso!')
+if choice == "Livros de Aventura":
+    col1, col2, col3 = st.columns(3) 
 
+    with col1:
+        st.header("Livro de Experiências")
+        st.image("Experiências .jpg")
+        Button36 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="imagine")
+        REF36 = str("Livro de Experiências - 3€")
+        if Button36 > 0:
+            Encomendas.append(REF36)
+     with col2:
+        st.header("Livro de Magia")
+        st.image("livro_magia.jpg")
+        Button37 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="imortal")
+        REF37 = str("Livro de Magia  - 3€")
+        if Button37 > 0:
+            Encomendas.append(REF37)
+    with col3:
+        st.header("Princesa dos Gelos")
+        st.image("Princesa_dos_gelos.jpg")
+        Button38 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="immersive")
+        REF38 = str("Princesa_dos_gelos  - 3€")
+        if Button38 > 0:
+            Encomendas.append(REF38)
+
+    col1, col2, col3 = st.columns(3) 
+
+    with col1:
+        st.header("CD - Room Office")
+        st.image("Oficce1.jpg")
+        Button39 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="Maskarede")
+        REF39 = str("Oficce CD Room - 1€")
+        if Button39 > 0:
+            Encomendas.append(REF39)
+     with col2:
+        st.header("CD-Room Windows - Print Documents")
+        st.image("Oficce2.jpg")
+        Button40 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="imortal")
+        REF40 = str("D-Room Windows - Print Documents  - 1€")
+        if Button40 > 0:
+            Encomendas.append(REF37)
+    with col3:
+        st.header("Princesa dos Gelos")
+        st.image("Princesa_dos_gelos.jpg")
+        Button41 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="immersive")
+        REF38 = str("Princesa dos Gelos  - 3€")
+        if Button41 > 0:
+            Encomendas.append(REF41)
+    
+    
         
+    st.header(Encomendas)
+        
+            Confirmar = st.button("Confirmar")
+            
+            email_form = st.form(key='my_email_for7', clear_on_submit=False)
+            email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
+            
+            subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
+            message = email_form.text_area (label = ' Escreva a sua Mensagem ')
+            encomenda = email_form.text_area (label = ' Artigos e Quantidade ', value = Encomendas )
+        
+            if email_form.form_submit_button(label='Enviar'):
+                mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
+                send_mail(email, subject, message, )
+                st.subheader('  Mensagem enviada com Sucesso!') 
+                st.write(Encomendas)
+    
+if choice == "Livros Académicos":
 
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.header("Livro de Geometria")
+        st.image("Livro_de_Desenho.jpg")
+        Button42 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="immersive")
+        REF42 = str("Livro de Geometria Descritiva  - 3€")
+        if Button42 > 0:
+            Encomendas.append(REF42)
+    with col2:
+         with col1:
+        st.header(Encomendas)
+    with col2:
+        Confirmar = st.button("Confirmar")
+        
+        email_form = st.form(key='my_email_form2', clear_on_submit=False)
+        email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
+        
+        subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
+        message = email_form.text_area (label = ' Escreva a sua Mensagem ')
+        encomenda = email_form.text_area (label = ' Artigos e Quantidade ', value = Encomendas )
+
+        if email_form.form_submit_button(label='Enviar'):
+            mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
+            send_mail(email, subject, message, )
+            st.subheader('  Mensagem enviada com Sucesso!') 
+            st.write(Encomendas)
+    
+        
