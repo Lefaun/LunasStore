@@ -556,7 +556,7 @@ if choice == "Livros de Aventura":
         REF39 = str("Oficce CD Room - 1€")
         if Button39 > 0:
             Encomendas.append(REF39)
-     with col2:
+    with col2:
         st.header("CD-Room Windows - Print Documents")
         st.image("Oficce2.jpg")
         Button40 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="imortal")
