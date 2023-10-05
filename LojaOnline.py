@@ -602,9 +602,8 @@ if choice == "Livros Académicos":
         if Button42 > 0:
             Encomendas.append(REF42)
     with col2:
-         with col1:
-         st.header(Encomendas)
-    with col2:
+        st.header(Encomendas)
+    with col3:
         Confirmar = st.button("Confirmar")
         
         email_form = st.form(key='my_email_form2', clear_on_submit=False)
