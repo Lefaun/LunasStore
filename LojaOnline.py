@@ -551,14 +551,14 @@ if choice == "Livros de Aventura":
 
     with col1:
         st.header("CD - Room Office")
-        st.image("Oficce1.jpg")
+        st.image("Office1.jpeg")
         Button39 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="Maskarede")
         REF39 = str("Oficce CD Room - 1€")
         if Button39 > 0:
             Encomendas.append(REF39)
     with col2:
         st.header("CD-Room Windows - Print Documents")
-        st.image("Oficce2.jpg")
+        st.image("Oficce2.jpeg")
         Button40 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="imortal")
         REF40 = str("D-Room Windows - Print Documents  - 1€")
         if Button40 > 0:
