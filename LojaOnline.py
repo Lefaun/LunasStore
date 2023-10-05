@@ -173,7 +173,7 @@ class ListarNome():
 st.title(" A Loja online da Luna -  Livraria e DVDs e Séries")
 st.write("adiciona ao teu carrinho ou segue pela opção Encomendar no menu lateral ou nas opções da página")
 
-Menu=("Encomendar","Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", " Livros de Aventura", " Livros de Ciência", "Livros Académicos")
+Menu=("Encomendar","Pipi das Meias Altas", " Filmes de Natal", " O Mundo de Patty", "Livros de Aventura", "Livros de Ciência", "Livros Académicos")
 components.html(
     """<!-- Hotjar Tracking Code for https://lunastore.streamlit.app/ -->
 <script>
