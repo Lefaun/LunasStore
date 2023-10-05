@@ -365,7 +365,7 @@ if choice == ' O Mundo de Patty':
             Encomendas.append(REF12)
     
     st.header(Encomendas)
-    st.write(df)
+    #st.write(df)
     Confirmar = st.button("Confirmar")
     
     email_form = st.form(key='my_email_form2', clear_on_submit=False)
