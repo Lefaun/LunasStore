@@ -527,7 +527,7 @@ if choice == "Livros de Aventura":
 
     with col1:
         st.header("Livro de Experiências")
-        st.image("Experiências .jpg")
+        st.image("Experiências .jpg")
         Button36 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="imagine")
         REF36 = str("Livro de Experiências - 3€")
         if Button36 > 0:
