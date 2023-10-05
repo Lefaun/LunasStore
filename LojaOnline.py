@@ -557,16 +557,16 @@ if choice == "Livros de Aventura":
         if Button39 > 0:
             Encomendas.append(REF39)
     with col2:
-        st.header("CD-Room Windows - Print Documents")
+        st.header("CD-R Windows - Print")
         st.image("Oficce2.jpeg")
-        Button40 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="imortal")
+        Button40 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="Cahnging")
         REF40 = str("D-Room Windows - Print Documents  - 1€")
         if Button40 > 0:
             Encomendas.append(REF37)
     with col3:
         st.header("Princesa dos Gelos")
         st.image("Princesa_dos_gelos.jpg")
-        Button41 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="immersive")
+        Button41 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="colours")
         REF41 = str("Princesa dos Gelos  - 3€")
         if Button41 > 0:
             Encomendas.append(REF41)
@@ -597,7 +597,7 @@ if choice == "Livros Académicos":
     with col1:
         st.header("Livro de Geometria")
         st.image("Livro_de_Desenho.jpg")
-        Button42 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="immersive")
+        Button42 = st.number_input("Quantidade e adicione ao Carrinho", min_value=0, key="mition")
         REF42 = str("Livro de Geometria Descritiva  - 3€")
         if Button42 > 0:
             Encomendas.append(REF42)
