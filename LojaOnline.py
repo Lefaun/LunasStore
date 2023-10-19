@@ -427,6 +427,7 @@ if choice == "Livros de Ciência":
     with col1:
         st.header(" Revista National Geographic")
         st.image("Revista_NG_Cerebro.jpeg")
+        txt2 = st.write("Revista sobre a fisiologia do Nosso Cérebro a capacidade de regenerar o organismo enquanto dormimos e a capacidade que temos em sonhar. De que forma nós Humanos somos capazer de memorizar o que aprendemos enquanto dormimos e de que forma o sono comanda a vida")
         Button20 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Core2")
         REF20 = str("Revista National Geographic Cérebro- 15€")
         if Button20 >0:
@@ -434,6 +435,7 @@ if choice == "Livros de Ciência":
     with col2:
         st.header("Revista Monocle")
         st.image("Monocle.jpeg")
+        txt4 = st.write("Revista Monocle que incide em assuntos de panorama internacional, interessantes artigos sobre a sociedade a ciência e arquitetura e o Design")
         Button21 = st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Alba2")
         REF21 = str("Revista Cultura e artes - Monocle - unidade 13€")
         if Button21 >0:
