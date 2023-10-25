@@ -112,12 +112,12 @@ class ListarNome():
                     
            
             
-    def tirar_Nome(self, livro):
-        if livro in self.Livros:
-            self.Livros.remove(livro)
-            st.write(f"O {Livro} foi removido da lista com sucesso.")
-        else:
-            st.write("O Livro introduzido não é válido.")
+    #def tirar_Nome(self, livro):
+        #if livro in self.Livros:
+            #self.Livros.remove(livro)
+            #st.write(f"O {Livro} foi removido da lista com sucesso.")
+        #else:
+            #st.write("O Livro introduzido não é válido.")
 
     def Listar_Nome(self):
         st.write("Os nomes que constam da lista são:")
@@ -387,6 +387,7 @@ if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("Mundo de Patty1.jpeg")
+        rotated_img = image.rotate(-90)
         Button4=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Coresey")
         txt = st.write("O Mundo de Patty vai surprender os seus filhos com maravilhosas histórias sobre adolescentes e a vida num colegio onde tudo pode Acontecer. Patty e os seus amigos vão entrar num grande de dasfio que é a escola meterem-se em aventuras musicais. Venha conhecer o Mundo de PATTY")
         REF4 = str("Mundo de Patty 1 - Unidade 3€")
@@ -394,6 +395,7 @@ if choice == ' O Mundo de Patty':
             Encomendas.append(REF4)
     with col2:
         st.image("Mundo de Patty2.jpeg")
+        otated_img = image.rotate(-90)
         Button5=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Ypsilon2")
         REF5 = str("Mundo Patty2 - Coleção 5 DVD : 5€")
         if Button5 >0:
