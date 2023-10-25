@@ -248,7 +248,7 @@ with st.sidebar:
     st.image("AI_Monster_Book_eater.png" , width=300)
     choice = st.selectbox("Selecione uma Opção", Menu, key="First")
     Encomendas = []
-    Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
+    Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD", key="two")
     button = st.sidebar.button("Pesquise Por TItulo")
     
     
@@ -272,8 +272,8 @@ if choice == 'Encomendar':
     
     choice = st.selectbox("Selecione uma Opção", Menu)
     Encomendas = []
-    Pesquisaref = st.text_input("Pesquisa por Livro/DVD")
-    buttonref = st.button("Pesquise Por TItulo")
+    Pesquisaref = st.text_input("Pesquisa por Livro/DVD", , key="three")
+    buttonref = st.button("Pesquise Por TItulo", key="forth")
     lista_nomes = ListarNome()
     lista_nomes.Menu_Completo()
     
