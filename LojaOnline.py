@@ -338,7 +338,7 @@ if choice == 'Encomendar':
         #mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
         #send_mail(email, subject, message, )
         #st.subheader('  Mensagem enviada com Sucesso!') 
-        st.write(Encomendas)
+    st.write(Encomendas)
         
 if choice == 'Pipi das Meias Altas':
     col1, col2, col3 = st.columns(3)
