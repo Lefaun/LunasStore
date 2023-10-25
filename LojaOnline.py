@@ -187,10 +187,10 @@ components.html(
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>""")
 
-choice = st.selectbox("Selecione uma Opção", Menu)
-Encomendas = []
-Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
-button = st.sidebar.button("Pesquise Por TItulo")
+#choice = st.selectbox("Selecione uma Opção", Menu)
+#Encomendas = []
+#Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
+#button = st.sidebar.button("Pesquise Por TItulo")
 
 
 def send_mail(email, subject, message):
@@ -265,6 +265,11 @@ with st.sidebar:
     
     
 if choice == 'Encomendar':
+    choice = st.selectbox("Selecione uma Opção", Menu)
+    Encomendas = []
+    Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
+    button = st.sidebar.button("Pesquise Por TItulo")
+
     lista_nomes = ListarNome()
     lista_nomes.Menu_Completo()
     
