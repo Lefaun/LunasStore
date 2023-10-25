@@ -395,7 +395,6 @@ if choice == ' O Mundo de Patty':
             Encomendas.append(REF4)
     with col2:
         st.image("Mundo de Patty2.jpeg")
-        otated_img = image.rotate(-90)
         Button5=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Ypsilon2")
         REF5 = str("Mundo Patty2 - Coleção 5 DVD : 5€")
         if Button5 >0:
