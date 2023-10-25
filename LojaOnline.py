@@ -37,11 +37,11 @@ class ListarNome():
         #Lista_de_Livros = df.to_csv(self.Lista, index=False, sep=';')
 
         #st.write(Lista_de_Livros)
-        send_mail(email, subject, message):
+        send_mail(email, subject, message)
        
      
         
-        mail(email_form, email, subject, message, encomenda,):
+        mail(email_form, email, subject, message, encomenda)
             
         
         
