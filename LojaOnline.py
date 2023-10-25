@@ -268,8 +268,8 @@ with st.sidebar:
 
 choice = st.selectbox("Selecione uma Opção", Menu)
 Encomendas = []
-Pesquisa = text_input("Pesquisa por Livro/DVD")
-button = st.button("Pesquise Por TItulo")
+Pesquisaref = text_input("Pesquisa por Livro/DVD")
+buttonref = st.button("Pesquise Por TItulo")
     
 if choice == 'Encomendar':
     
