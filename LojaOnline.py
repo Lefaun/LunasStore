@@ -386,7 +386,7 @@ if choice == 'Pipi das Meias Altas':
 if choice == ' O Mundo de Patty':
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image.("Mundo de Patty1.jpeg")
+        st.image("Mundo de Patty1.jpeg")
         
         Button4=st.number_input("Quantidade e adicione ao Carrinho",min_value=0, key="Coresey")
         txt = st.write("O Mundo de Patty vai surprender os seus filhos com maravilhosas histórias sobre adolescentes e a vida num colegio onde tudo pode Acontecer. Patty e os seus amigos vão entrar num grande de dasfio que é a escola meterem-se em aventuras musicais. Venha conhecer o Mundo de PATTY")
