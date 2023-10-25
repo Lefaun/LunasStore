@@ -266,14 +266,14 @@ with st.sidebar:
         send_mail(email, subject, message)
         st.subheader('  Mensagem enviada com Sucesso!')
 
-choice = st.selectbox("Selecione uma Opção", Menu)
-Encomendas = []
-Pesquisaref = text_input("Pesquisa por Livro/DVD")
-buttonref = st.button("Pesquise Por TItulo")
+
     
 if choice == 'Encomendar':
     
-
+    choice = st.selectbox("Selecione uma Opção", Menu)
+    Encomendas = []
+    Pesquisaref = text_input("Pesquisa por Livro/DVD")
+    buttonref = st.button("Pesquise Por TItulo")
     lista_nomes = ListarNome()
     lista_nomes.Menu_Completo()
     
