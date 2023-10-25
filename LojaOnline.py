@@ -246,7 +246,10 @@ class EmailSend():
 with st.sidebar:
 
     st.image("AI_Monster_Book_eater.png" , width=300)
-    
+    choice = st.selectbox("Selecione uma Opção", Menu)
+    Encomendas = []
+    Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
+    button = st.sidebar.button("Pesquise Por TItulo")
     
     
 
@@ -265,10 +268,7 @@ with st.sidebar:
     
     
 if choice == 'Encomendar':
-    Encomendar = st.selectbox("Selecione uma Opção", Menu)
-    Encomendas = []
-    Pesquisa = st.sidebar.text_input("Pesquisa por Livro/DVD")
-    button = st.sidebar.button("Pesquise Por TItulo")
+    
 
     lista_nomes = ListarNome()
     lista_nomes.Menu_Completo()
