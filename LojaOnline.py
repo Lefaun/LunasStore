@@ -37,11 +37,55 @@ class ListarNome():
         #Lista_de_Livros = df.to_csv(self.Lista, index=False, sep=';')
 
         #st.write(Lista_de_Livros)
-        send_mail(email, subject, message)
-       
-     
+        def send_mail(email, subject, message):
+            try:
+                server = smtplib.SMTP('smtp.gmail.com',587)
+                server.ehlo()
+                server.starttls()
+                username = 'maillefaun@gmail.com'
+                password = 'qftabgvjolpfjniw'
+                server.login(username, password)
+                to_email = 'maillefaun@gmail.com'
+                server.sendmail(username, to_email, mensagem,  )
+                
+                server.close()
+            except Exception as e:
+                st.error(f' Ocorreu um Erro ao enviar o e-mail, Desculpe: {e}')
+
+        class EmailSend():
+            def __init__(self, mail, send_mail):
+                self.mail = mail
+                self.send_mail = send_mail
+    
+        def send_mail(email, subject, message):
+            try:
+                server = smtplib.SMTP('smtp.gmail.com',587)
+                server.ehlo()
+                server.starttls()
+                username = 'maillefaun@gmail.com'
+                password = 'qftabgvjolpfjniw'
+                server.login(username, password)
+                to_email = 'maillefaun@gmail.com'
+                server.sendmail(username, to_email, mensagem,  )
+                
+                server.close()
+            except Exception as e:
+                st.error(f' Ocorreu um Erro ao enviar o e-mail, Desculpe: {e}')
         
-        mail(email_form, email, subject, message, encomenda)
+    def mail(email_form, email, subject, message, encomenda,):
+            
+        email_form = st.form(key='my_email_form4', clear_on_submit=False)
+        email = email_form.text_input(label='Por Favor Escreva o Seu Endereço de e-mail')
+    
+        subject = email_form.text_input (label = ' Escreva aqui o Assunto ' )
+        message = email_form.text_area (label = ' Escreva a sua Mensagem ')
+        encomenda = email_form.text_area (label = ' Artigos e Quantidade ', value = Encomendas )
+    
+        if email_form.form_submit_button(label='Enviar'):
+            mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
+            send_mail(email, subject, message, )
+            st.subheader('  Mensagem enviada com Sucesso!') 
+            st.write(Encomendas)
             
         
         
