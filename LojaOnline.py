@@ -272,7 +272,7 @@ if choice == 'Encomendar':
     
     choice = st.selectbox("Selecione uma Opção", Menu)
     Encomendas = []
-    Pesquisaref = text_input("Pesquisa por Livro/DVD")
+    Pesquisaref = st.text_input("Pesquisa por Livro/DVD")
     buttonref = st.button("Pesquise Por TItulo")
     lista_nomes = ListarNome()
     lista_nomes.Menu_Completo()
