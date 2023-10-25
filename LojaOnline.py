@@ -265,7 +265,11 @@ with st.sidebar:
         mensagem = f'Subject:{subject}\n\n De: {email}\n\n Assunto: {message}, Artigos: {encomenda}'.encode('utf-8')
         send_mail(email, subject, message)
         st.subheader('  Mensagem enviada com Sucesso!')
-    
+
+choice = st.selectbox("Selecione uma Opção", Menu)
+Encomendas = []
+Pesquisa = text_input("Pesquisa por Livro/DVD")
+button = st.button("Pesquise Por TItulo")
     
 if choice == 'Encomendar':
     
